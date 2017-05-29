@@ -1,0 +1,21 @@
+sudo: false
+
+language: python
+
+python:
+  - 2.7
+
+install:
+  - pip install --user codecov
+
+script:
+  - coverage run tests.py
+
+after_success:
+- codecov
+
+
+# command to install dependencies
+#install: "pip install -r requirements.txt"
+# command to run tests
+#script: pytest
