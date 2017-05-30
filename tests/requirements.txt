@@ -1,0 +1,8 @@
+coverage
+pytest
+pytest-cov
+unittest2
+numpy
+pandas
+pickle
+scipy
