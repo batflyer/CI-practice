@@ -4,4 +4,3 @@ pytest-cov
 unittest2
 numpy
 pandas
-scipy
