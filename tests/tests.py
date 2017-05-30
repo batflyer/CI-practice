@@ -1,9 +1,6 @@
 # Tests for CI-practice
 import os
 import sys
-import numpy
-import pickle
-import pandas
 import unittest
 
 class BasicFunctions:
