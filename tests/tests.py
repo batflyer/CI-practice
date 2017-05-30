@@ -5,8 +5,6 @@ import numpy
 import pickle
 import pandas
 import unittest
-import sklearn.ensemble as ske
-from sklearn import cross_validation, tree, linear_model
 
 class BasicFunctions:
 
