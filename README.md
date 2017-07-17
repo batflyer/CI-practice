@@ -16,11 +16,9 @@ Sriraam Natarajan, Tushar Khot, Kristian Kersting and Jude Shavlik, Boosted Stat
 
 ## Installation
 
----
+Python 2.7:
 
-Python 2.7
-
-Python 3
+Python 3:
 
 [license]:license.txt
 [license img]:https://img.shields.io/aur/license/yaourt.svg
