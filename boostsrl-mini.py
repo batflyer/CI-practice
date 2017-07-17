@@ -1,5 +1,5 @@
 '''
-boostsrl-mini: a barebones version of BoostSRL implemented in Python3.
+boostsrl-mini: a barebones version of BoostSRL implemented in Python2.7 and Python3
 '''
 
 import argparse
@@ -29,7 +29,7 @@ class Setup:
         
         # Start by creating an argument parser to help with user input.
         parser = argparse.ArgumentParser(description="boostsrl-mini: a barebones version of BoostSRL implemented in Python3."\
-                                         " Written by: Alexander L. Hayes, Kaushik Roy, and Devendra Singh Dhami.",
+                                         " Written by: Alexander L. Hayes and Kaushik Roy",
                                          epilog="Copyright 2017 Free Software Foundation, Inc."\
                                          " License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>."\
                                          " This is free software: you are free to change and redistribute it."\
@@ -126,20 +126,6 @@ class FileWriter:
         pass
 
     def write_modes_to_file(self):
-        pass
-
-class ConstructModes:
-    
-    def __init__(self):
-        pass
-
-    def handleTargetVariables(self):
-        pass
-
-    def handleRelationVariables(self):
-        pass
-
-    def handleAttributeVariables(self):
         pass
 
 if __name__ == '__main__':
