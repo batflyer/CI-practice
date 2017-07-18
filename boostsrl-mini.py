@@ -26,17 +26,19 @@ class Setup:
         self.aucjarpath = '.'             # -aucJarPath [PATH]
         self.trees = 10                   # -trees [NUMBER]
         self.database = None              # -database server
-        
+    
+    def parse_command_line_arguments(self):
+
         # Start by creating an argument parser to help with user input.
         parser = argparse.ArgumentParser(description="boostsrl-mini: a barebones version of BoostSRL implemented in Python3."\
-                                         " Written by: Alexander L. Hayes and Kaushik Roy",
+                                         " Written by: Kaushik Roy and Alexander L. Hayes",
                                          epilog="Copyright 2017 Free Software Foundation, Inc."\
                                          " License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>."\
                                          " This is free software: you are free to change and redistribute it."\
                                          " There is NO WARRANTY, to the extent permitted by law.")
         # Add the arguments.
         learninginference = parser.add_mutually_exclusive_group()
-        #parser.add_argument("diagram_file")
+
         learninginference.add_argument("-l", "--learn",
                                        help="Learn a model for training data.",
                                        action="store_true")
@@ -55,34 +57,17 @@ class Setup:
         
         # Get the args.
         args = parser.parse_args()
-        print(args)
-        exit()
-
-        # Make sure the diagram_file is valid.
-        if not os.path.isfile(args.diagram_file):
-            raise ExceptionCase('Error [1]: Could not find file: "' + args.diagram_file + '"')
-
-        # Import the file:
-        '''Reads the contents of 'file_to_read', raises an exception if it cannot be read.'''
-        try:
-            diagram = open(args.diagram_file).read()
-        except:
-            raise ExceptionCase('Error [1]: Could not read the file: "' + args.diagram_file + '"')
-
-        if (len(diagram.splitlines()) == 6):
-            self.diagram_file = diagram
-        else:
-            raise ExceptionCase('Error [1]: File opened successfully, but has the wrong number of lines.')
-            
-        # Since the files exist, we can go ahead and set the rest of the parameters, starting with verbose
-        self.verbose = args.verbose
         
-        if (args.number != None):
-            if (args.number >= 0):
-                self.Nfeatures = args.number
-            else:
-                raise(ExceptionCase('Error [1]: Cannot have negative features.'))
+        if not ((args.infer) or (args.learn)):
+            raise ExceptionCase('Must either learn or infer.')
 
+        print('value of args.learn is: ' + str(args.learn))
+        print('value of args.infer is: ' + str(args.infer))
+
+        tests = UnitTests()
+        tests.test_file_exists('background.txt')
+        
+        '''
         # Check the rest of the parameters, update if necessary.
         if not (args.walk or args.nowalk or args.exhaustive or args.random or args.shortest or args.randomwalk):
             # If this occurs, no flags were specified, so keep defaults (default: self.walk=True).
@@ -99,6 +84,7 @@ class Setup:
         if self.verbose:
             print('Imported Diagram File:\n')
             print(diagram)
+        '''
 
 class UnitTests:
 
@@ -106,8 +92,13 @@ class UnitTests:
         pass
 
     def test_file_exists(self, file_to_test):
+        if setup.verbose:
+            print('Checking for ' + file_to_test)
         if not os.path.isfile(file_to_test):
-            raise ExceptionCase('Error [2]: Could not find file: "' + args.diagram_file + '"')
+            raise ExceptionCase('Error [2]: Could not find file: "' + file_to_test + '"')
+        
+    def test_directory_exists(self, dir_to_test):
+        pass
 
     def run_unit_tests(self):
         pass
@@ -132,3 +123,4 @@ if __name__ == '__main__':
 
     '''Parse the commandline input, import the file. Contents are stored in setup.diagram_file.'''
     setup = Setup()
+    args = setup.parse_command_line_arguments()
