@@ -1,0 +1,8 @@
+pos, 0.8561191304641681, father(elizabeth, mrbennet)
+pos, 0.8561191304641681, father(jane, mrbennet)
+pos, 0.8561191304641681, father(charlotte, mrlucas)
+pos, 0.03415959182749116, father(charlotte, mrsbennet)
+pos, 0.06120126352670835, father(jane, mrlucas)
+pos, 0.06120126352670835, father(mrsbennet, mrbennet)
+pos, 0.03415959182749116, father(jane, elizabeth)
+

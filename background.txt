@@ -1,0 +1,11 @@
+//Parameters
+setParam: maxTreeDepth=3.
+setParam: nodeSize=1.
+setParam: numOfClauses=8.
+//Modes
+mode: male(+name).
+mode: childof(+name,+name).
+mode: siblingof(+name,-name).
+mode: father(+name,+name).
+//Bridgers
+//bridger: siblingof/2.

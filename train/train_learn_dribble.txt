@@ -1,0 +1,1939 @@
+% Running on host: hawk
+
+% Switching to VarIndicator = uppercase.
+
+% Unset'ing VarIndicator.
+
+% Calling ILPouterLoop from createRegressionOuterLooper.
+
+% getInputArgWithDefaultValue: args=[train/train_pos.txt, train/train_neg.txt, train/train_bk.txt, train/train_facts.txt]
+%  for N=0: args[N]=train/train_pos.txt
+
+% getInputArgWithDefaultValue: args=[train/train_pos.txt, train/train_neg.txt, train/train_bk.txt, train/train_facts.txt]
+%  for N=1: args[N]=train/train_neg.txt
+
+% getInputArgWithDefaultValue: args=[train/train_pos.txt, train/train_neg.txt, train/train_bk.txt, train/train_facts.txt]
+%  for N=2: args[N]=train/train_bk.txt
+
+% getInputArgWithDefaultValue: args=[train/train_pos.txt, train/train_neg.txt, train/train_bk.txt, train/train_facts.txt]
+%  for N=3: args[N]=train/train_facts.txt
+
+% Welcome to the WILL ILP/SRL systems.
+
+
+% Switching to VarIndicator = uppercase.
+
+% Unset'ing VarIndicator.
+% Reading background theory from dir: null
+% Load '../background.txt'.
+
+% Switching to VarIndicator = uppercase.
+
+***** Warning: % Since this is the first setting of the notation for variables, will keep:
+%   variableIndicator = uppercase *****
+
+
+***** Warning: % Since this is the first setting of the notation for variables, will keep:
+%   variableIndicator = uppercase *****
+
+% [ LazyGroundClauseIndex ]  Building full index for mode/1 with 1 assertions.
+% LoadAllModes() called.  Currently loaded modes: []
+% [ LazyGroundClauseIndex ]  Building full index for sameAs/2 with 2 assertions.
+% [ LazyGroundNthArgumentClauseIndex ]  Argument 1:  Building full index for exp/3.
+% [ LazyGroundNthArgumentClauseIndex ]  Argument 0:  Building full index for log/3.
+% LoadAllLibraries() called.  Currently loaded libraries: [listsInLogic, differentInLogic, modes_arithmeticInLogic, inlines_comparisonInLogic, modes_listsInLogic, inlines_differentInLogic, modes_differentInLogic, arithmeticInLogic, inlines_listsInLogic, modes_comparisonInLogic, comparisonInLogic, inlines_arithmeticInLogic]
+
+%  Read the facts.
+%  Have read 41 facts.
+% Have read 5 examples from 'train' [train/train*].
+% Have read 21 examples from 'train' [train/train*].
+
+%  LearnOneClause initialized.
+
+% The outer looper has been created.
+
+% Initializing the ILP inner looper.
+
+% NEW target:                 father(D, E)
+%  targetPred:                father/2
+%  targetArgTypes:            signature = [const, const], types = [+name, +name]
+%  targets:                   [father(D, E)]
+%  targetPredicates:          [father/2]
+%  targetArgSpecs:            [[D[+name], E[+name]]]
+%  variablesInTargets:        [[D, E]]
+
+% Started collecting constants
+
+% Collecting the types of constants.
+
+% Looking at the training examples to see if any types of new constants can be inferred.
+% Time to collect constants: 5 milliseconds
+% Time to collect examples: 0 seconds
+
+% Read 5 pos examples and 21 neg examples.
+% Time to init learnOneClause: 11 milliseconds
+% Old dirnull
+Setting model dir
+
+% Have 5 'raw' positive examples and kept 5.
+% Have 21 'raw' negative examples and kept 21.
+
+% processing backup's for father
+%  POS EX = 5
+%  NEG EX = 21
+
+% Memory usage by WILLSetup (just counts # targets?):
+%  |backupPosExamples| = 1
+%  |backupNegExamples| = 1
+%  |predicatesAsFacts| = 0
+%  |addedToFactBase|   = 0
+train/models/
+File: train/advice.txt doesnt exist.Hence no advice loaded
+% Learning 10 trees in this iteration for father
+
+% Learn model for: father
+% Kept 5 of the 5 positive examples.
+% Kept 14 of the 21 negative examples.
+%      addToQueueOfTreeStructuredLearningTasks (level=0; score=1.797693135e+308)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 0 and with score = 1.797693135e+308) into the LAST position (#1) in the search queue.
+Variance:0.19390581717451522
+Set score:0.0025
+% Dataset size: 19
+Computing probabilities
+prob time:1 milliseconds
+No hidden examples for : father
+Time to build dataset: 1 milliseconds
+%      addToQueueOfTreeStructuredLearningTasks (level=0; score=1.797693135e+308)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 0 and with score = 1.797693135e+308) into the LAST position (#1) in the search queue.
+Variance:0.19390581717451505
+Set score:0.0025
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% Have these 10 positive seeds: 0 3 5 7 10 12 13 15 16 17
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% LearnOneClause Parameters:
+%   Targets (1):
+%    father(+name, +name)
+%  Modes (39):
+%    male(+name),
+%    childof(+name, +name),
+%    siblingof(+name, -name),
+%    addList(+willList, #willNumber),
+%    multiplyList(+willList, #willNumber),
+%    abs(+willNumber, &willNumber),
+%    minus(+willNumber, &willNumber),
+%    minus(+willNumber, +willNumber, &willNumber),
+%    plus(+willNumber, +willNumber, &willNumber),
+%    mult(+willNumber, +willNumber, &willNumber),
+%    div(+willNumber, +willNumber, &willNumber),
+%    allNumbers(+willList),
+%    positiveNumber(+willNumber),
+%    negativeNumber(+willNumber),
+%    in0toDot001(+willNumber),
+%    in0toDot01(+willNumber),
+%    in0toDot1(+willNumber),
+%    in0to1(+willNumber),
+%    in0to10(+willNumber),
+%    in0to100(+willNumber),
+%    in0to1000(+willNumber),
+%    equalWithTolerance(+willNumber, +willNumber, &willNumber),
+%    greaterOrEqualDifference(+willNumber, +willNumber, &willNumber),
+%    smallerOrEqualDifference(+willNumber, +willNumber, &willNumber),
+%    isaEqualTolerance(+willNumber),
+%    lessThan(+willNumber, +willNumber),
+%    greaterThan(+willNumber, +willNumber),
+%    lessThanOrEqual(+willNumber, +willNumber),
+%    greaterThanOrEqual(+willNumber, +willNumber),
+%    inBetweenOO(+willNumber, +willNumber, +willNumber),
+%    inBetweenCO(+willNumber, +willNumber, +willNumber),
+%    inBetweenOC(+willNumber, +willNumber, +willNumber),
+%    inBetweenCC(+willNumber, +willNumber, +willNumber),
+%    memberOfList(+willAnything, +willList),
+%    firstInList(+willList, &willAnything),
+%    restOfList(+willList, &willList),
+%    positionInList(+willAnything, +willList, &willNumber),
+%    nthInList(+willNumber, +willList, &willAnything),
+%    lengthOfList(+willList, &willNumber)
+
+% target           = father(D, E)
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.2E-7) for clause:  father(_, _).  [covers 19.0/19.0 pos, 0.0/0.0 neg]
+% Most-general root: father(_, _).  [covers 19.0/19.0 pos, 0.0/0.0 neg]  score = -Infinity
+
+% Consider expanding [#1 of outerLoop #1, bodyLen=0] 'father(_, _).  [covers 19.0/19.0 pos, 0.0/0.0 neg]' score=-Infinity
+% [ LazyGroundClauseIndex ]  Building full index for male/1 with 13 assertions.
+% [ LazyGroundClauseIndex ]  Building full index for childof/2 with 16 assertions.
+% [ LazyGroundClauseIndex ]  Building full index for siblingof/2 with 12 assertions.
+% [ LazyGroundNthArgumentClauseIndex ]  Argument 0:  Building full index for siblingof/2.
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 0 variant children.  Sending 7 items to OPEN for evaluation and possible insertion.
+% Have created 7 valid-on-seeds descendants and have picked up 5 bad extensions.
+%     Score = -3.602565 (regressionFit = 3.602564, penalties=1.12E-6) for clause:  father(A, _) :- male(A).  [covers 13.0/19.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -3.602565): father(A, _) :- male(A).  [covers 13.0/19.0 pos, 0.0/0.0 neg]
+%     Score = -3.076924 (regressionFit = 3.076923, penalties=1.12E-6) for clause:  father(_, A) :- male(A).  [covers 13.0/19.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -3.076924): father(_, A) :- male(A).  [covers 13.0/19.0 pos, 0.0/0.0 neg]
+%     Score = -0.833334 (regressionFit = 0.833333, penalties=1.0200000000000002E-6) for clause:  father(A, B) :- childof(B, A).  [covers 6.0/19.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -0.833334): father(A, B) :- childof(B, A).  [covers 6.0/19.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.0200000000000002E-6) for clause:  father(A, B) :- siblingof(A, B).  [covers 2.0/19.0 pos, 0.0/0.0 neg]
+%     Score = -3.655557 (regressionFit = 3.655556, penalties=1.23E-6) for clause:  father(A, _) :- siblingof(A, _).  [covers 10.0/19.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.0200000000000002E-6) for clause:  father(A, B) :- siblingof(B, A).  [covers 2.0/19.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  father(_, A) :- siblingof(A, _).  [covers 2.0/19.0 pos, 0.0/0.0 neg]
+
+% The best node found: father(A, B) :- childof(B, A).  [covers 6.0/19.0 pos, 0.0/0.0 neg]
+
+% The best node found: father(A, B) :- childof(B, A).  [covers 6.0/19.0 pos, 0.0/0.0 neg]
+
+% Expanding node at Level 0 with score = 1.797693e+308.
+% Will extend: father(A, B) :- childof(B, A).  [covers 6.0/19.0 pos, 0.0/0.0 neg]
+Comparing variance: 0.1388888888888887 to score=0.0025 #egs=6.0
+Comparing variance: -1.2810265668751807E-17 to score=0.0025 #egs=13.0
+%   Creating a TRUE-branch leaf because wgtedCountTrueBranchPos = 6.0 < 2.1 * minPosCov = 6.3
+%   Creating a FALSE-branch leaf because good enough fit since score < 0.0025
+
+% Time for loop #1: 35 milliseconds.
+% Internal node max length = 1
+% Max tree depth in lits   = 12
+% Max tree depth in nodes  = 3
+% Max number of clauses    = 8
+
+% On cycle #1, the best clause found is:
+%      father(A, B) :- childof(B, A).  [covers 6.0/19.0 pos, 0.0/0.0 neg]
+% This clause covers 6 positive examples, of which 6 are newly covered.
+% It also covers 0 negative examples, of which 0 are newly covered.
+
+% ******************************************
+
+%  Have stopped ILP's outer loop because the tree-structured queue is empty.
+
+% ******************************************
+
+%%%%%  WILL-Produced Tree #1 @ 16:32:28 12/28/16.  [Using 3,299,232 memory cells.]  %%%%%
+
+
+% FOR father(A, B):
+%   if ( childof(B, A) )
+%   then return 0.6914822684328455;  // std dev = 0.913, 6.000 (wgt'ed) examples reached here.  /* #neg=1 #pos=5 */
+%   else return -0.1418510649004878;  // std dev = 0.000, 13.000 (wgt'ed) examples reached here.  /* #neg=13 */
+
+
+% Clauses:
+
+father(A, B, 0.6914822684328455) :- 
+     childof(B, A), 
+     !. // Clause #1.
+
+father(A, B, -0.1418510649004878) :- !. // Clause #2.
+
+
+% The flattened versions of these clauses:
+
+flattened_father(a, b, 0.6914822684328455) :-  /* #neg=1 #pos=5 */ 
+   childof(b, a),
+   !. // Flattened version of clause #1.
+
+flattened_father(underscore, underscore, -0.1418510649004878) :-  /* #neg=13 */ 
+   !. // Flattened version of clause #2.
+
+
+% The unique flattened literals:
+%   childof(b, a)
+
+% Saving model in: train/models/bRDNs/father.model.ckpt
+% Time taken to learn 1 trees is 119 milliseconds.
+
+%      addToQueueOfTreeStructuredLearningTasks (level=0; score=1.797693135e+308)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 0 and with score = 1.797693135e+308) into the LAST position (#1) in the search queue.
+Variance:0.19390581717451505
+Set score:0.0025
+% Only 19 out of 19 converged.
+% Kept 5 of the 5 positive examples.
+% Kept 9 of the 21 negative examples.
+% Dataset size: 14
+Computing probabilities
+prob time:1 milliseconds
+No hidden examples for : father
+Time to build dataset: 1 milliseconds
+%      addToQueueOfTreeStructuredLearningTasks (level=0; score=1.797693135e+308)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 0 and with score = 1.797693135e+308) into the LAST position (#1) in the search queue.
+Variance:0.17670548644981307
+Set score:0.0025
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% Have these 9 positive seeds: 0 2 3 6 8 9 10 11 12
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% target           = father(D, E)
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.2E-7) for clause:  father(_, _).  [covers 14.0/14.0 pos, 0.0/0.0 neg]
+% Most-general root: father(_, _).  [covers 14.0/14.0 pos, 0.0/0.0 neg]  score = -Infinity
+
+% Consider expanding [#1 of outerLoop #1, bodyLen=0] 'father(_, _).  [covers 14.0/14.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 0 variant children.  Sending 4 items to OPEN for evaluation and possible insertion.
+% Have created 4 valid-on-seeds descendants and have picked up 7 bad extensions.
+%     Score = -2.424400 (regressionFit = 2.424399, penalties=1.12E-6) for clause:  father(A, _) :- male(A).  [covers 10.0/14.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -2.424400): father(A, _) :- male(A).  [covers 10.0/14.0 pos, 0.0/0.0 neg]
+%     Score = -2.099048 (regressionFit = 2.099047, penalties=1.12E-6) for clause:  father(_, A) :- male(A).  [covers 11.0/14.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -2.099048): father(_, A) :- male(A).  [covers 11.0/14.0 pos, 0.0/0.0 neg]
+%     Score = -0.000001 (regressionFit = 0.000000, penalties=1.0200000000000002E-6) for clause:  father(A, B) :- childof(B, A).  [covers 5.0/14.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -0.000001): father(A, B) :- childof(B, A).  [covers 5.0/14.0 pos, 0.0/0.0 neg]
+%     Score = -2.120816 (regressionFit = 2.120815, penalties=1.23E-6) for clause:  father(A, _) :- siblingof(A, _).  [covers 5.0/14.0 pos, 0.0/0.0 neg]
+
+% The best node found: father(A, B) :- childof(B, A).  [covers 5.0/14.0 pos, 0.0/0.0 neg]
+
+% The best node found: father(A, B) :- childof(B, A).  [covers 5.0/14.0 pos, 0.0/0.0 neg]
+
+% Expanding node at Level 0 with score = 1.797693e+308.
+% Will extend: father(A, B) :- childof(B, A).  [covers 5.0/14.0 pos, 0.0/0.0 neg]
+Comparing variance: 0.0 to score=0.0025 #egs=5.0
+Comparing variance: 0.0 to score=0.0025 #egs=9.0
+%   Creating a TRUE-branch leaf because wgtedCountTrueBranchPos = 5.0 < 2.1 * minPosCov = 6.3
+%   Creating a FALSE-branch leaf because good enough fit since score < 0.0025
+
+% Time for loop #1: 12 milliseconds.
+% Internal node max length = 1
+% Max tree depth in lits   = 12
+% Max tree depth in nodes  = 3
+% Max number of clauses    = 8
+
+% On cycle #1, the best clause found is:
+%      father(A, B) :- childof(B, A).  [covers 5.0/14.0 pos, 0.0/0.0 neg]
+% This clause covers 5 positive examples, of which 5 are newly covered.
+% It also covers 0 negative examples, of which 0 are newly covered.
+
+% ******************************************
+
+%  Have stopped ILP's outer loop because the tree-structured queue is empty.
+
+% ******************************************
+
+%%%%%  WILL-Produced Tree #2 @ 16:32:28 12/28/16.  [Using 1,487,584 memory cells.]  %%%%%
+
+
+% FOR father(A, B):
+%   if ( childof(B, A) )
+%   then return 0.7518526675222027;  // std dev = 0.000, 5.000 (wgt'ed) examples reached here.  /* #pos=5 */
+%   else return -0.12544463852839138;  // std dev = 0.000, 9.000 (wgt'ed) examples reached here.  /* #neg=9 */
+
+
+% Clauses:
+
+father(A, B, 0.7518526675222027) :- 
+     childof(B, A), 
+     !. // Clause #1.
+
+father(A, B, -0.12544463852839138) :- !. // Clause #2.
+
+
+% The flattened versions of these clauses:
+
+flattened_father(a, b, 0.7518526675222027) :-  /* #pos=5 */ 
+   childof(b, a),
+   !. // Flattened version of clause #1.
+
+flattened_father(underscore, underscore, -0.12544463852839138) :-  /* #neg=9 */ 
+   !. // Flattened version of clause #2.
+
+
+% The unique flattened literals:
+%   childof(b, a)
+
+% Saving model in: train/models/bRDNs/father.model.ckpt
+% Time taken to learn 2 trees is 183 milliseconds.
+
+%      addToQueueOfTreeStructuredLearningTasks (level=0; score=1.797693135e+308)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 0 and with score = 1.797693135e+308) into the LAST position (#1) in the search queue.
+Variance:0.17670548644981307
+Set score:0.0025
+% Only 14 out of 14 converged.
+% Kept 5 of the 5 positive examples.
+% Kept 11 of the 21 negative examples.
+% Dataset size: 16
+Computing probabilities
+prob time:3 milliseconds
+No hidden examples for : father
+Time to build dataset: 3 milliseconds
+%      addToQueueOfTreeStructuredLearningTasks (level=0; score=1.797693135e+308)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 0 and with score = 1.797693135e+308) into the LAST position (#1) in the search queue.
+Variance:0.11888739052656988
+Set score:0.0025
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% Have these 10 positive seeds: 2 3 4 5 6 8 9 10 12 13
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% target           = father(D, E)
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.2E-7) for clause:  father(_, _).  [covers 16.0/16.0 pos, 0.0/0.0 neg]
+% Most-general root: father(_, _).  [covers 16.0/16.0 pos, 0.0/0.0 neg]  score = -Infinity
+
+% Consider expanding [#1 of outerLoop #1, bodyLen=0] 'father(_, _).  [covers 16.0/16.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 0 variant children.  Sending 7 items to OPEN for evaluation and possible insertion.
+% Have created 7 valid-on-seeds descendants and have picked up 5 bad extensions.
+%     Score = -1.797496 (regressionFit = 1.797495, penalties=1.12E-6) for clause:  father(A, _) :- male(A).  [covers 11.0/16.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -1.797496): father(A, _) :- male(A).  [covers 11.0/16.0 pos, 0.0/0.0 neg]
+%     Score = -1.410199 (regressionFit = 1.410198, penalties=1.12E-6) for clause:  father(_, A) :- male(A).  [covers 11.0/16.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -1.410199): father(_, A) :- male(A).  [covers 11.0/16.0 pos, 0.0/0.0 neg]
+%     Score = -0.833334 (regressionFit = 0.833333, penalties=1.0200000000000002E-6) for clause:  father(A, B) :- childof(B, A).  [covers 6.0/16.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -0.833334): father(A, B) :- childof(B, A).  [covers 6.0/16.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.0200000000000002E-6) for clause:  father(A, B) :- siblingof(A, B).  [covers 2.0/16.0 pos, 0.0/0.0 neg]
+%     Score = -1.839699 (regressionFit = 1.839698, penalties=1.23E-6) for clause:  father(A, _) :- siblingof(A, _).  [covers 8.0/16.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.0200000000000002E-6) for clause:  father(A, B) :- siblingof(B, A).  [covers 2.0/16.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  father(_, A) :- siblingof(A, _).  [covers 2.0/16.0 pos, 0.0/0.0 neg]
+
+% The best node found: father(A, B) :- childof(B, A).  [covers 6.0/16.0 pos, 0.0/0.0 neg]
+
+% The best node found: father(A, B) :- childof(B, A).  [covers 6.0/16.0 pos, 0.0/0.0 neg]
+
+% Expanding node at Level 0 with score = 1.797693e+308.
+% Will extend: father(A, B) :- childof(B, A).  [covers 6.0/16.0 pos, 0.0/0.0 neg]
+Comparing variance: 0.13888888888888892 to score=0.0025 #egs=6.0
+Comparing variance: 0.0 to score=0.0025 #egs=10.0
+%   Creating a TRUE-branch leaf because wgtedCountTrueBranchPos = 6.0 < 2.1 * minPosCov = 6.3
+%   Creating a FALSE-branch leaf because good enough fit since score < 0.0025
+
+% Time for loop #1: 14 milliseconds.
+% Internal node max length = 1
+% Max tree depth in lits   = 12
+% Max tree depth in nodes  = 3
+% Max number of clauses    = 8
+
+% On cycle #1, the best clause found is:
+%      father(A, B) :- childof(B, A).  [covers 6.0/16.0 pos, 0.0/0.0 neg]
+% This clause covers 6 positive examples, of which 6 are newly covered.
+% It also covers 0 negative examples, of which 0 are newly covered.
+
+% ******************************************
+
+%  Have stopped ILP's outer loop because the tree-structured queue is empty.
+
+% ******************************************
+
+%%%%%  WILL-Produced Tree #3 @ 16:32:28 12/28/16.  [Using 1,456,848 memory cells.]  %%%%%
+
+
+% FOR father(A, B):
+%   if ( childof(B, A) )
+%   then return 0.4215662343950373;  // std dev = 0.913, 6.000 (wgt'ed) examples reached here.  /* #neg=1 #pos=5 */
+%   else return -0.11231637819360638;  // std dev = 0.000, 10.000 (wgt'ed) examples reached here.  /* #neg=10 */
+
+
+% Clauses:
+
+father(A, B, 0.4215662343950373) :- 
+     childof(B, A), 
+     !. // Clause #1.
+
+father(A, B, -0.11231637819360638) :- !. // Clause #2.
+
+
+% The flattened versions of these clauses:
+
+flattened_father(a, b, 0.4215662343950373) :-  /* #neg=1 #pos=5 */ 
+   childof(b, a),
+   !. // Flattened version of clause #1.
+
+flattened_father(underscore, underscore, -0.11231637819360638) :-  /* #neg=10 */ 
+   !. // Flattened version of clause #2.
+
+
+% The unique flattened literals:
+%   childof(b, a)
+
+% Saving model in: train/models/bRDNs/father.model.ckpt
+% Time taken to learn 3 trees is 255 milliseconds.
+
+%      addToQueueOfTreeStructuredLearningTasks (level=0; score=1.797693135e+308)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 0 and with score = 1.797693135e+308) into the LAST position (#1) in the search queue.
+Variance:0.11888739052656988
+Set score:0.0025
+% Only 16 out of 16 converged.
+% Kept 5 of the 5 positive examples.
+% Kept 8 of the 21 negative examples.
+% Dataset size: 13
+Computing probabilities
+prob time:1 milliseconds
+No hidden examples for : father
+Time to build dataset: 2 milliseconds
+%      addToQueueOfTreeStructuredLearningTasks (level=0; score=1.797693135e+308)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 0 and with score = 1.797693135e+308) into the LAST position (#1) in the search queue.
+Variance:0.1322066683314283
+Set score:0.0025
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% Have these 10 positive seeds: 0 1 2 3 5 6 7 8 9 10
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% target           = father(D, E)
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.2E-7) for clause:  father(_, _).  [covers 13.0/13.0 pos, 0.0/0.0 neg]
+% Most-general root: father(_, _).  [covers 13.0/13.0 pos, 0.0/0.0 neg]  score = -Infinity
+
+% Consider expanding [#1 of outerLoop #1, bodyLen=0] 'father(_, _).  [covers 13.0/13.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 0 variant children.  Sending 4 items to OPEN for evaluation and possible insertion.
+% Have created 4 valid-on-seeds descendants and have picked up 7 bad extensions.
+%     Score = -1.637324 (regressionFit = 1.637323, penalties=1.12E-6) for clause:  father(A, _) :- male(A).  [covers 9.0/13.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -1.637324): father(A, _) :- male(A).  [covers 9.0/13.0 pos, 0.0/0.0 neg]
+%     Score = -0.848795 (regressionFit = 0.848794, penalties=1.12E-6) for clause:  father(_, A) :- male(A).  [covers 8.0/13.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -0.848795): father(_, A) :- male(A).  [covers 8.0/13.0 pos, 0.0/0.0 neg]
+%     Score = -1.428572 (regressionFit = 1.428571, penalties=1.0200000000000002E-6) for clause:  father(A, B) :- childof(B, A).  [covers 7.0/13.0 pos, 0.0/0.0 neg]
+%     Score = -1.425779 (regressionFit = 1.425777, penalties=1.23E-6) for clause:  father(A, _) :- siblingof(A, _).  [covers 5.0/13.0 pos, 0.0/0.0 neg]
+
+% The best node found: father(_, A) :- male(A).  [covers 8.0/13.0 pos, 0.0/0.0 neg]
+
+% The best node found: father(_, A) :- male(A).  [covers 8.0/13.0 pos, 0.0/0.0 neg]
+
+% Expanding node at Level 0 with score = 1.797693e+308.
+% Will extend: father(_, A) :- male(A).  [covers 8.0/13.0 pos, 0.0/0.0 neg]
+Comparing variance: 0.08031232401332351 to score=0.0025 #egs=8.0
+Comparing variance: 0.04125898948611965 to score=0.0025 #egs=5.0
+%   Creating a TRUE-branch interior node with wgtedCountTrueBranchPos = 8.0
+%      addToQueueOfTreeStructuredLearningTasks (level=1; score=-0.080312)
+%         ILP node to extend: father(_, A) :- male(A).  [covers 8.0/13.0 pos, 0.0/0.0 neg]
+%      Insert tree-structured search node (@ level = 1 and with score = -0.080312) into the LAST position (#1) in the search queue.
+%   Creating a FALSE-branch leaf because wgtedCountFalseBranchPos = 5.0 < 2.1 * minPosCov = 6.3
+
+% Time for loop #1: 9 milliseconds.
+% Internal node max length = 1
+% Max tree depth in lits   = 12
+% Max tree depth in nodes  = 3
+% Max number of clauses    = 8
+
+% On cycle #1, the best clause found is:
+%      father(_, A) :- male(A).  [covers 8.0/13.0 pos, 0.0/0.0 neg]
+% This clause covers 8 positive examples, of which 8 are newly covered.
+% It also covers 0 negative examples, of which 0 are newly covered.
+
+% Working on expanding this node: 'father(_, A) :- male(A).  [covers 8.0/8.0 pos, 0.0/0.0 neg]'
+%     Score = -0.848795 (regressionFit = 0.848794, penalties=1.12E-6) for clause:  father(_, A) :- male(A).  [covers 8.0/8.0 pos, 0.0/0.0 neg]
+
+***** Warning: % Have only 8 positive examples, so cannot choose 10 of them. *****
+
+
+% Have these 8 positive seeds: 0 1 2 3 4 5 6 7
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% Consider expanding [#1 of outerLoop #2, bodyLen=1] 'father(_, A) :- male(A).  [covers 8.0/8.0 pos, 0.0/0.0 neg]' score=-0.8487946595371864
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 0 variant children.  Sending 3 items to OPEN for evaluation and possible insertion.
+% Have created 3 valid-on-seeds descendants and have picked up 7 bad extensions.
+%     Score = -0.502579 (regressionFit = 0.502577, penalties=1.9200000000000003E-6) for clause:  father(A, B) :- male(B), male(A).  [covers 5.0/8.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -0.502579): father(A, B) :- male(B), male(A).  [covers 5.0/8.0 pos, 0.0/0.0 neg]
+%     Score = -0.000002 (regressionFit = -3.46945e-18, penalties=2.0200000000000006E-6) for clause:  father(A, B) :- male(B), childof(B, A).  [covers 5.0/8.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -0.000002): father(A, B) :- male(B), childof(B, A).  [covers 5.0/8.0 pos, 0.0/0.0 neg]
+%     Score = -0.411201 (regressionFit = 0.411199, penalties=2.1300000000000004E-6) for clause:  father(A, B) :- male(B), siblingof(A, _).  [covers 3.0/8.0 pos, 0.0/0.0 neg]
+
+% The best node found: father(A, B) :- male(B), childof(B, A).  [covers 5.0/8.0 pos, 0.0/0.0 neg]
+
+% The best node found: father(A, B) :- male(B), childof(B, A).  [covers 5.0/8.0 pos, 0.0/0.0 neg]
+
+% Expanding node at Level 1 with score = -0.080.
+% Will extend: father(A, B) :- male(B), childof(B, A).  [covers 5.0/8.0 pos, 0.0/0.0 neg]
+Comparing variance: 0.0 to score=0.0025 #egs=5.0
+Comparing variance: -1.1564823173178713E-18 to score=0.0025 #egs=3.0
+%   Creating a TRUE-branch leaf because wgtedCountTrueBranchPos = 5.0 < 2.1 * minPosCov = 6.3
+%   Creating a FALSE-branch leaf because wgtedCountFalseBranchPos = 3.0 < 2.1 * minPosCov = 6.3
+
+% Time for loop #2: 9 milliseconds.
+% Internal node max length = 1
+% Max tree depth in lits   = 12
+% Max tree depth in nodes  = 3
+% Max number of clauses    = 8
+
+% On cycle #2, the best clause found is:
+%      father(A, B) :- male(B), childof(B, A).  [covers 5.0/8.0 pos, 0.0/0.0 neg]
+% This clause covers 5 positive examples, of which 5 are newly covered.
+% It also covers 0 negative examples, of which 0 are newly covered.
+
+% ******************************************
+
+%  Have stopped ILP's outer loop because the tree-structured queue is empty.
+
+% ******************************************
+
+%%%%%  WILL-Produced Tree #4 @ 16:32:28 12/28/16.  [Using 1,482,072 memory cells.]  %%%%%
+
+
+% FOR father(A, B):
+%   if ( male(B) )
+%   then if ( childof(B, A) )
+%   | then return 0.4837804003111713;  // std dev = 0.000, 5.000 (wgt'ed) examples reached here.  /* #pos=5 */
+%   | else return -0.1015963294878363;  // std dev = 0.000, 3.000 (wgt'ed) examples reached here.  /* #neg=3 */
+%   else return -0.26744563756823325;  // std dev = 0.454, 5.000 (wgt'ed) examples reached here.  /* #neg=5 */
+
+
+% Clauses:
+
+father(A, B, 0.4837804003111713) :- 
+     male(B), 
+     childof(B, A), 
+     !. // Clause #1.
+
+father(A, B, -0.1015963294878363) :- 
+     male(B), 
+     !. // Clause #2.
+
+father(A, B, -0.26744563756823325) :- !. // Clause #3.
+
+
+% The flattened versions of these clauses:
+
+flattened_father(a, b, 0.4837804003111713) :-  /* #pos=5 */ 
+   male(b),
+   childof(b, a),
+   !. // Flattened version of clause #1.
+
+flattened_father(underscore, a, -0.1015963294878363) :-  /* #neg=3 */ 
+   male(a),
+   !. // Flattened version of clause #2.
+
+flattened_father(underscore, underscore, -0.26744563756823325) :-  /* #neg=5 */ 
+   !. // Flattened version of clause #3.
+
+
+% The unique flattened literals:
+%   male(a)
+%   childof(b, a)
+%   male(b)
+
+% Saving model in: train/models/bRDNs/father.model.ckpt
+% Time taken to learn 4 trees is 330 milliseconds.
+
+%      addToQueueOfTreeStructuredLearningTasks (level=0; score=1.797693135e+308)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 0 and with score = 1.797693135e+308) into the LAST position (#1) in the search queue.
+Variance:0.08031232401332351
+Set score:0.0025
+% Only 13 out of 13 converged.
+% Kept 5 of the 5 positive examples.
+% Kept 8 of the 21 negative examples.
+% Dataset size: 13
+Computing probabilities
+prob time:3 milliseconds
+No hidden examples for : father
+Time to build dataset: 4 milliseconds
+%      addToQueueOfTreeStructuredLearningTasks (level=0; score=1.797693135e+308)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 0 and with score = 1.797693135e+308) into the LAST position (#1) in the search queue.
+Variance:0.08555786302155247
+Set score:0.0025
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% Have these 8 positive seeds: 0 1 3 4 5 6 7 8
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% target           = father(D, E)
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.2E-7) for clause:  father(_, _).  [covers 13.0/13.0 pos, 0.0/0.0 neg]
+% Most-general root: father(_, _).  [covers 13.0/13.0 pos, 0.0/0.0 neg]  score = -Infinity
+
+% Consider expanding [#1 of outerLoop #1, bodyLen=0] 'father(_, _).  [covers 13.0/13.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 0 variant children.  Sending 4 items to OPEN for evaluation and possible insertion.
+% Have created 4 valid-on-seeds descendants and have picked up 7 bad extensions.
+%     Score = -0.874817 (regressionFit = 0.874816, penalties=1.12E-6) for clause:  father(A, _) :- male(A).  [covers 8.0/13.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -0.874817): father(A, _) :- male(A).  [covers 8.0/13.0 pos, 0.0/0.0 neg]
+%     Score = -0.617595 (regressionFit = 0.617594, penalties=1.12E-6) for clause:  father(_, A) :- male(A).  [covers 10.0/13.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -0.617595): father(_, A) :- male(A).  [covers 10.0/13.0 pos, 0.0/0.0 neg]
+%     Score = -0.950682 (regressionFit = 0.950681, penalties=1.0200000000000002E-6) for clause:  father(A, B) :- childof(B, A).  [covers 7.0/13.0 pos, 0.0/0.0 neg]
+%     Score = -1.087252 (regressionFit = 1.087251, penalties=1.23E-6) for clause:  father(A, _) :- siblingof(A, _).  [covers 6.0/13.0 pos, 0.0/0.0 neg]
+
+% The best node found: father(_, A) :- male(A).  [covers 10.0/13.0 pos, 0.0/0.0 neg]
+
+% The best node found: father(_, A) :- male(A).  [covers 10.0/13.0 pos, 0.0/0.0 neg]
+
+% Expanding node at Level 0 with score = 1.797693e+308.
+% Will extend: father(_, A) :- male(A).  [covers 10.0/13.0 pos, 0.0/0.0 neg]
+Comparing variance: 0.05263849770667658 to score=0.0025 #egs=10.0
+Comparing variance: 0.030402871202597714 to score=0.0025 #egs=3.0
+%   Creating a TRUE-branch interior node with wgtedCountTrueBranchPos = 10.0
+%      addToQueueOfTreeStructuredLearningTasks (level=1; score=-0.052638)
+%         ILP node to extend: father(_, A) :- male(A).  [covers 10.0/13.0 pos, 0.0/0.0 neg]
+%      Insert tree-structured search node (@ level = 1 and with score = -0.052638) into the LAST position (#1) in the search queue.
+%   Creating a FALSE-branch leaf because wgtedCountFalseBranchPos = 3.0 < 2.1 * minPosCov = 6.3
+
+% Time for loop #1: 6 milliseconds.
+% Internal node max length = 1
+% Max tree depth in lits   = 12
+% Max tree depth in nodes  = 3
+% Max number of clauses    = 8
+
+% On cycle #1, the best clause found is:
+%      father(_, A) :- male(A).  [covers 10.0/13.0 pos, 0.0/0.0 neg]
+% This clause covers 10 positive examples, of which 10 are newly covered.
+% It also covers 0 negative examples, of which 0 are newly covered.
+
+% Working on expanding this node: 'father(_, A) :- male(A).  [covers 10.0/10.0 pos, 0.0/0.0 neg]'
+%     Score = -0.617595 (regressionFit = 0.617594, penalties=1.12E-6) for clause:  father(_, A) :- male(A).  [covers 10.0/10.0 pos, 0.0/0.0 neg]
+
+% Have these 8 positive seeds: 0 1 2 3 4 5 6 7
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% Consider expanding [#1 of outerLoop #2, bodyLen=1] 'father(_, A) :- male(A).  [covers 10.0/10.0 pos, 0.0/0.0 neg]' score=-0.6175947106745588
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 0 variant children.  Sending 3 items to OPEN for evaluation and possible insertion.
+% Have created 3 valid-on-seeds descendants and have picked up 7 bad extensions.
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.9200000000000003E-6) for clause:  father(A, B) :- male(B), male(A).  [covers 8.0/10.0 pos, 0.0/0.0 neg]
+%     Score = -0.000002 (regressionFit = 1.11022e-16, penalties=2.0200000000000006E-6) for clause:  father(A, B) :- male(B), childof(B, A).  [covers 5.0/10.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -0.000002): father(A, B) :- male(B), childof(B, A).  [covers 5.0/10.0 pos, 0.0/0.0 neg]
+%     Score = -0.505332 (regressionFit = 0.505330, penalties=2.1300000000000004E-6) for clause:  father(A, B) :- male(B), siblingof(A, _).  [covers 5.0/10.0 pos, 0.0/0.0 neg]
+
+% The best node found: father(A, B) :- male(B), childof(B, A).  [covers 5.0/10.0 pos, 0.0/0.0 neg]
+
+% The best node found: father(A, B) :- male(B), childof(B, A).  [covers 5.0/10.0 pos, 0.0/0.0 neg]
+
+% Expanding node at Level 1 with score = -0.053.
+% Will extend: father(A, B) :- male(B), childof(B, A).  [covers 5.0/10.0 pos, 0.0/0.0 neg]
+Comparing variance: 2.2204460492503132E-17 to score=0.0025 #egs=5.0
+Comparing variance: 0.0 to score=0.0025 #egs=5.0
+%   Creating a TRUE-branch leaf because wgtedCountTrueBranchPos = 5.0 < 2.1 * minPosCov = 6.3
+%   Creating a FALSE-branch leaf because wgtedCountFalseBranchPos = 5.0 < 2.1 * minPosCov = 6.3
+
+% Time for loop #2: 6 milliseconds.
+% Internal node max length = 1
+% Max tree depth in lits   = 12
+% Max tree depth in nodes  = 3
+% Max number of clauses    = 8
+
+% On cycle #2, the best clause found is:
+%      father(A, B) :- male(B), childof(B, A).  [covers 5.0/10.0 pos, 0.0/0.0 neg]
+% This clause covers 5 positive examples, of which 5 are newly covered.
+% It also covers 0 negative examples, of which 0 are newly covered.
+
+% ******************************************
+
+%  Have stopped ILP's outer loop because the tree-structured queue is empty.
+
+% ******************************************
+
+%%%%%  WILL-Produced Tree #5 @ 16:32:28 12/28/16.  [Using 1,489,368 memory cells.]  %%%%%
+
+
+% FOR father(A, B):
+%   if ( male(B) )
+%   then if ( childof(B, A) )
+%   | then return 0.36617034873344523;  // std dev = 1.05e-08, 5.000 (wgt'ed) examples reached here.  /* #pos=5 */
+%   | else return -0.09269127618926096;  // std dev = 0.000, 5.000 (wgt'ed) examples reached here.  /* #neg=5 */
+%   else return -0.3262421830168772;  // std dev = 0.302, 3.000 (wgt'ed) examples reached here.  /* #neg=3 */
+
+
+% Clauses:
+
+father(A, B, 0.36617034873344523) :- 
+     male(B), 
+     childof(B, A), 
+     !. // Clause #1.
+
+father(A, B, -0.09269127618926096) :- 
+     male(B), 
+     !. // Clause #2.
+
+father(A, B, -0.3262421830168772) :- !. // Clause #3.
+
+
+% The flattened versions of these clauses:
+
+flattened_father(a, b, 0.36617034873344523) :-  /* #pos=5 */ 
+   male(b),
+   childof(b, a),
+   !. // Flattened version of clause #1.
+
+flattened_father(underscore, a, -0.09269127618926096) :-  /* #neg=5 */ 
+   male(a),
+   !. // Flattened version of clause #2.
+
+flattened_father(underscore, underscore, -0.3262421830168772) :-  /* #neg=3 */ 
+   !. // Flattened version of clause #3.
+
+
+% The unique flattened literals:
+%   male(a)
+%   childof(b, a)
+%   male(b)
+
+% Saving model in: train/models/bRDNs/father.model.ckpt
+% Time taken to learn 5 trees is 402 milliseconds.
+
+%      addToQueueOfTreeStructuredLearningTasks (level=0; score=1.797693135e+308)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 0 and with score = 1.797693135e+308) into the LAST position (#1) in the search queue.
+Variance:0.05263849770667658
+Set score:0.0025
+% Only 13 out of 13 converged.
+% Kept 5 of the 5 positive examples.
+% Kept 15 of the 21 negative examples.
+% Dataset size: 20
+Computing probabilities
+prob time:2 milliseconds
+No hidden examples for : father
+Time to build dataset: 2 milliseconds
+%      addToQueueOfTreeStructuredLearningTasks (level=0; score=1.797693135e+308)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 0 and with score = 1.797693135e+308) into the LAST position (#1) in the search queue.
+Variance:0.03760610616547859
+Set score:0.0025
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% Have these 8 positive seeds: 0 2 3 6 11 12 13 14
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% target           = father(D, E)
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.2E-7) for clause:  father(_, _).  [covers 20.0/20.0 pos, 0.0/0.0 neg]
+% Most-general root: father(_, _).  [covers 20.0/20.0 pos, 0.0/0.0 neg]  score = -Infinity
+
+% Consider expanding [#1 of outerLoop #1, bodyLen=0] 'father(_, _).  [covers 20.0/20.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 0 variant children.  Sending 4 items to OPEN for evaluation and possible insertion.
+% Have created 4 valid-on-seeds descendants and have picked up 7 bad extensions.
+%     Score = -0.658598 (regressionFit = 0.658597, penalties=1.12E-6) for clause:  father(A, _) :- male(A).  [covers 13.0/20.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -0.658598): father(A, _) :- male(A).  [covers 13.0/20.0 pos, 0.0/0.0 neg]
+%     Score = -0.547902 (regressionFit = 0.547901, penalties=1.12E-6) for clause:  father(_, A) :- male(A).  [covers 12.0/20.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -0.547902): father(_, A) :- male(A).  [covers 12.0/20.0 pos, 0.0/0.0 neg]
+%     Score = -0.618534 (regressionFit = 0.618533, penalties=1.0200000000000002E-6) for clause:  father(A, B) :- childof(B, A).  [covers 7.0/20.0 pos, 0.0/0.0 neg]
+%     Score = -0.741310 (regressionFit = 0.741309, penalties=1.23E-6) for clause:  father(A, _) :- siblingof(A, _).  [covers 9.0/20.0 pos, 0.0/0.0 neg]
+
+% The best node found: father(_, A) :- male(A).  [covers 12.0/20.0 pos, 0.0/0.0 neg]
+
+% The best node found: father(_, A) :- male(A).  [covers 12.0/20.0 pos, 0.0/0.0 neg]
+
+% Expanding node at Level 0 with score = 1.797693e+308.
+% Will extend: father(_, A) :- male(A).  [covers 12.0/20.0 pos, 0.0/0.0 neg]
+Comparing variance: 0.03348918299134459 to score=0.0025 #egs=12.0
+Comparing variance: 0.018253843797745275 to score=0.0025 #egs=8.0
+%   Creating a TRUE-branch interior node with wgtedCountTrueBranchPos = 12.0
+%      addToQueueOfTreeStructuredLearningTasks (level=1; score=-0.033489)
+%         ILP node to extend: father(_, A) :- male(A).  [covers 12.0/20.0 pos, 0.0/0.0 neg]
+%      Insert tree-structured search node (@ level = 1 and with score = -0.033489) into the LAST position (#1) in the search queue.
+%   Creating a FALSE-branch interior node with wgtedCountFalseBranchPos = 8.0
+%      addToQueueOfTreeStructuredLearningTasks (level=1; score=-0.018254)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 1 and with score = -0.018254) into the LAST position (#2) in the search queue.
+
+% Time for loop #1: 6 milliseconds.
+% Internal node max length = 1
+% Max tree depth in lits   = 12
+% Max tree depth in nodes  = 3
+% Max number of clauses    = 8
+
+% On cycle #1, the best clause found is:
+%      father(_, A) :- male(A).  [covers 12.0/20.0 pos, 0.0/0.0 neg]
+% This clause covers 12 positive examples, of which 12 are newly covered.
+% It also covers 0 negative examples, of which 0 are newly covered.
+
+% Working on expanding this node: 'father(_, A) :- male(A).  [covers 12.0/12.0 pos, 0.0/0.0 neg]'
+%     Score = -0.547902 (regressionFit = 0.547901, penalties=1.12E-6) for clause:  father(_, A) :- male(A).  [covers 12.0/12.0 pos, 0.0/0.0 neg]
+
+% Have these 8 positive seeds: 0 1 2 3 4 5 6 7
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% Consider expanding [#1 of outerLoop #2, bodyLen=1] 'father(_, A) :- male(A).  [covers 12.0/12.0 pos, 0.0/0.0 neg]' score=-0.5479020662780972
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 0 variant children.  Sending 3 items to OPEN for evaluation and possible insertion.
+% Have created 3 valid-on-seeds descendants and have picked up 7 bad extensions.
+%     Score = -0.398045 (regressionFit = 0.398043, penalties=1.9200000000000003E-6) for clause:  father(A, B) :- male(B), male(A).  [covers 9.0/12.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -0.398045): father(A, B) :- male(B), male(A).  [covers 9.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -0.000002 (regressionFit = 6.93889e-18, penalties=2.0200000000000006E-6) for clause:  father(A, B) :- male(B), childof(B, A).  [covers 5.0/12.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -0.000002): father(A, B) :- male(B), childof(B, A).  [covers 5.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -0.390390 (regressionFit = 0.390388, penalties=2.1300000000000004E-6) for clause:  father(A, B) :- male(B), siblingof(A, _).  [covers 6.0/12.0 pos, 0.0/0.0 neg]
+
+% The best node found: father(A, B) :- male(B), childof(B, A).  [covers 5.0/12.0 pos, 0.0/0.0 neg]
+
+% The best node found: father(A, B) :- male(B), childof(B, A).  [covers 5.0/12.0 pos, 0.0/0.0 neg]
+
+% Expanding node at Level 1 with score = -0.033.
+% Will extend: father(A, B) :- male(B), childof(B, A).  [covers 5.0/12.0 pos, 0.0/0.0 neg]
+Comparing variance: 0.0 to score=0.0025 #egs=5.0
+Comparing variance: 9.912705577010326E-19 to score=0.0025 #egs=7.0
+%   Creating a TRUE-branch leaf because wgtedCountTrueBranchPos = 5.0 < 2.1 * minPosCov = 6.3
+%   Creating a FALSE-branch leaf because good enough fit since score < 0.0025
+
+% Time for loop #2: 6 milliseconds.
+% Internal node max length = 1
+% Max tree depth in lits   = 12
+% Max tree depth in nodes  = 3
+% Max number of clauses    = 8
+
+% On cycle #2, the best clause found is:
+%      father(A, B) :- male(B), childof(B, A).  [covers 5.0/12.0 pos, 0.0/0.0 neg]
+% This clause covers 5 positive examples, of which 5 are newly covered.
+% It also covers 0 negative examples, of which 0 are newly covered.
+
+% Have these 8 positive seeds: 0 1 2 3 4 5 6 7
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% target           = father(D, E)
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.2E-7) for clause:  father(_, _).  [covers 8.0/8.0 pos, 0.0/0.0 neg]
+% Most-general root: father(_, _).  [covers 8.0/8.0 pos, 0.0/0.0 neg]  score = -Infinity
+
+% Consider expanding [#1 of outerLoop #3, bodyLen=0] 'father(_, _).  [covers 8.0/8.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 0 variant children.  Sending 3 items to OPEN for evaluation and possible insertion.
+% Have created 3 valid-on-seeds descendants and have picked up 8 bad extensions.
+%     Score = -0.097355 (regressionFit = 0.097354, penalties=1.12E-6) for clause:  father(A, _) :- male(A).  [covers 4.0/8.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -0.097355): father(A, _) :- male(A).  [covers 4.0/8.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.0200000000000002E-6) for clause:  father(A, B) :- childof(B, A).  [covers 2.0/8.0 pos, 0.0/0.0 neg]
+%     Score = -0.142787 (regressionFit = 0.142786, penalties=1.23E-6) for clause:  father(A, _) :- siblingof(A, _).  [covers 3.0/8.0 pos, 0.0/0.0 neg]
+
+% The best node found: father(A, _) :- male(A).  [covers 4.0/8.0 pos, 0.0/0.0 neg]
+
+% The best node found: father(A, _) :- male(A).  [covers 4.0/8.0 pos, 0.0/0.0 neg]
+
+% Expanding node at Level 1 with score = -0.018.
+% Will extend: father(A, _) :- male(A).  [covers 4.0/8.0 pos, 0.0/0.0 neg]
+Comparing variance: 0.0 to score=0.0025 #egs=4.0
+Comparing variance: 0.024338458396993695 to score=0.0025 #egs=4.0
+%   Creating a TRUE-branch leaf because wgtedCountTrueBranchPos = 4.0 < 2.1 * minPosCov = 6.3
+%   Creating a FALSE-branch leaf because wgtedCountFalseBranchPos = 4.0 < 2.1 * minPosCov = 6.3
+
+% Time for loop #3: 6 milliseconds.
+% Internal node max length = 1
+% Max tree depth in lits   = 12
+% Max tree depth in nodes  = 3
+% Max number of clauses    = 8
+
+% On cycle #3, the best clause found is:
+%      father(A, _) :- male(A).  [covers 4.0/8.0 pos, 0.0/0.0 neg]
+% This clause covers 4 positive examples, of which 4 are newly covered.
+% It also covers 0 negative examples, of which 0 are newly covered.
+
+% ******************************************
+
+%  Have stopped ILP's outer loop because the tree-structured queue is empty.
+
+% ******************************************
+
+%%%%%  WILL-Produced Tree #6 @ 16:32:28 12/28/16.  [Using 1,521,120 memory cells.]  %%%%%
+
+
+% FOR father(A, B):
+%   if ( male(B) )
+%   then if ( childof(B, A) )
+%   | then return 0.2860080114241198;  // std dev = 0.000, 5.000 (wgt'ed) examples reached here.  /* #pos=5 */
+%   | else return -0.08518475138839687;  // std dev = 2.63e-09, 7.000 (wgt'ed) examples reached here.  /* #neg=7 */
+%   else if ( male(A) )
+%   | then return -0.05878416847773236;  // std dev = 0.000, 4.000 (wgt'ed) examples reached here.  /* #neg=4 */
+%   | else return -0.21479204775629218;  // std dev = 0.312, 4.000 (wgt'ed) examples reached here.  /* #neg=4 */
+
+
+% Clauses:
+
+father(A, B, 0.2860080114241198) :- 
+     male(B), 
+     childof(B, A), 
+     !. // Clause #1.
+
+father(A, B, -0.08518475138839687) :- 
+     male(B), 
+     !. // Clause #2.
+
+father(A, B, -0.05878416847773236) :- 
+     male(A), 
+     !. // Clause #3.
+
+father(A, B, -0.21479204775629218) :- !. // Clause #4.
+
+
+% The flattened versions of these clauses:
+
+flattened_father(a, b, 0.2860080114241198) :-  /* #pos=5 */ 
+   male(b),
+   childof(b, a),
+   !. // Flattened version of clause #1.
+
+flattened_father(underscore, a, -0.08518475138839687) :-  /* #neg=7 */ 
+   male(a),
+   !. // Flattened version of clause #2.
+
+flattened_father(a, underscore, -0.05878416847773236) :-  /* #neg=4 */ 
+   male(a),
+   !. // Flattened version of clause #3.
+
+flattened_father(underscore, underscore, -0.21479204775629218) :-  /* #neg=4 */ 
+   !. // Flattened version of clause #4.
+
+
+% The unique flattened literals:
+%   male(a)
+%   childof(b, a)
+%   male(b)
+
+% Saving model in: train/models/bRDNs/father.model.ckpt
+% Time taken to learn 6 trees is 490 milliseconds.
+
+%      addToQueueOfTreeStructuredLearningTasks (level=0; score=1.797693135e+308)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 0 and with score = 1.797693135e+308) into the LAST position (#1) in the search queue.
+Variance:0.018253843797745275
+Set score:0.0025
+% Only 20 out of 20 converged.
+% Kept 5 of the 5 positive examples.
+% Kept 11 of the 21 negative examples.
+% Dataset size: 16
+Computing probabilities
+prob time:1 milliseconds
+No hidden examples for : father
+Time to build dataset: 3 milliseconds
+%      addToQueueOfTreeStructuredLearningTasks (level=0; score=1.797693135e+308)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 0 and with score = 1.797693135e+308) into the LAST position (#1) in the search queue.
+Variance:0.026822194641557797
+Set score:0.0025
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% Have these 8 positive seeds: 1 4 7 10 12 13 14 15
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% target           = father(D, E)
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.2E-7) for clause:  father(_, _).  [covers 16.0/16.0 pos, 0.0/0.0 neg]
+% Most-general root: father(_, _).  [covers 16.0/16.0 pos, 0.0/0.0 neg]  score = -Infinity
+
+% Consider expanding [#1 of outerLoop #1, bodyLen=0] 'father(_, _).  [covers 16.0/16.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 0 variant children.  Sending 7 items to OPEN for evaluation and possible insertion.
+% Have created 7 valid-on-seeds descendants and have picked up 5 bad extensions.
+%     Score = -0.385582 (regressionFit = 0.385580, penalties=1.12E-6) for clause:  father(A, _) :- male(A).  [covers 10.0/16.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -0.385582): father(A, _) :- male(A).  [covers 10.0/16.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.12E-6) for clause:  father(_, A) :- male(A).  [covers 14.0/16.0 pos, 0.0/0.0 neg]
+%     Score = -0.256198 (regressionFit = 0.256197, penalties=1.0200000000000002E-6) for clause:  father(A, B) :- childof(B, A).  [covers 6.0/16.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -0.256198): father(A, B) :- childof(B, A).  [covers 6.0/16.0 pos, 0.0/0.0 neg]
+%     Score = -0.403341 (regressionFit = 0.403340, penalties=1.0200000000000002E-6) for clause:  father(A, B) :- siblingof(A, B).  [covers 3.0/16.0 pos, 0.0/0.0 neg]
+%     Score = -0.428060 (regressionFit = 0.428059, penalties=1.23E-6) for clause:  father(A, _) :- siblingof(A, _).  [covers 9.0/16.0 pos, 0.0/0.0 neg]
+%     Score = -0.403341 (regressionFit = 0.403340, penalties=1.0200000000000002E-6) for clause:  father(A, B) :- siblingof(B, A).  [covers 3.0/16.0 pos, 0.0/0.0 neg]
+%     Score = -0.403341 (regressionFit = 0.403340, penalties=1.23E-6) for clause:  father(_, A) :- siblingof(A, _).  [covers 3.0/16.0 pos, 0.0/0.0 neg]
+
+% The best node found: father(A, B) :- childof(B, A).  [covers 6.0/16.0 pos, 0.0/0.0 neg]
+
+% The best node found: father(A, B) :- childof(B, A).  [covers 6.0/16.0 pos, 0.0/0.0 neg]
+
+% Expanding node at Level 0 with score = 1.797693e+308.
+% Will extend: father(A, B) :- childof(B, A).  [covers 6.0/16.0 pos, 0.0/0.0 neg]
+Comparing variance: 0.04255713191860633 to score=0.0025 #egs=6.0
+Comparing variance: 8.543308836971644E-5 to score=0.0025 #egs=10.0
+%   Creating a TRUE-branch leaf because wgtedCountTrueBranchPos = 6.0 < 2.1 * minPosCov = 6.3
+%   Creating a FALSE-branch leaf because good enough fit since score < 0.0025
+
+% Time for loop #1: 6 milliseconds.
+% Internal node max length = 1
+% Max tree depth in lits   = 12
+% Max tree depth in nodes  = 3
+% Max number of clauses    = 8
+
+% On cycle #1, the best clause found is:
+%      father(A, B) :- childof(B, A).  [covers 6.0/16.0 pos, 0.0/0.0 neg]
+% This clause covers 6 positive examples, of which 6 are newly covered.
+% It also covers 0 negative examples, of which 0 are newly covered.
+
+% ******************************************
+
+%  Have stopped ILP's outer loop because the tree-structured queue is empty.
+
+% ******************************************
+
+%%%%%  WILL-Produced Tree #7 @ 16:32:28 12/28/16.  [Using 1,523,856 memory cells.]  %%%%%
+
+
+% FOR father(A, B):
+%   if ( childof(B, A) )
+%   then return 0.13906488288702865;  // std dev = 0.505, 6.000 (wgt'ed) examples reached here.  /* #neg=1 #pos=5 */
+%   else return -0.07569575402119033;  // std dev = 0.029, 10.000 (wgt'ed) examples reached here.  /* #neg=10 */
+
+
+% Clauses:
+
+father(A, B, 0.13906488288702865) :- 
+     childof(B, A), 
+     !. // Clause #1.
+
+father(A, B, -0.07569575402119033) :- !. // Clause #2.
+
+
+% The flattened versions of these clauses:
+
+flattened_father(a, b, 0.13906488288702865) :-  /* #neg=1 #pos=5 */ 
+   childof(b, a),
+   !. // Flattened version of clause #1.
+
+flattened_father(underscore, underscore, -0.07569575402119033) :-  /* #neg=10 */ 
+   !. // Flattened version of clause #2.
+
+
+% The unique flattened literals:
+%   childof(b, a)
+
+% Saving model in: train/models/bRDNs/father.model.ckpt
+% Time taken to learn 7 trees is 572 milliseconds.
+
+%      addToQueueOfTreeStructuredLearningTasks (level=0; score=1.797693135e+308)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 0 and with score = 1.797693135e+308) into the LAST position (#1) in the search queue.
+Variance:0.026822194641557797
+Set score:0.0025
+% Only 16 out of 16 converged.
+% Kept 5 of the 5 positive examples.
+% Kept 12 of the 21 negative examples.
+% Dataset size: 17
+Computing probabilities
+prob time:2 milliseconds
+No hidden examples for : father
+Time to build dataset: 2 milliseconds
+%      addToQueueOfTreeStructuredLearningTasks (level=0; score=1.797693135e+308)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 0 and with score = 1.797693135e+308) into the LAST position (#1) in the search queue.
+Variance:0.030999732438534912
+Set score:0.0025
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% Have these 8 positive seeds: 0 2 4 5 8 9 12 16
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% target           = father(D, E)
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.2E-7) for clause:  father(_, _).  [covers 17.0/17.0 pos, 0.0/0.0 neg]
+% Most-general root: father(_, _).  [covers 17.0/17.0 pos, 0.0/0.0 neg]  score = -Infinity
+
+% Consider expanding [#1 of outerLoop #1, bodyLen=0] 'father(_, _).  [covers 17.0/17.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 0 variant children.  Sending 4 items to OPEN for evaluation and possible insertion.
+% Have created 4 valid-on-seeds descendants and have picked up 7 bad extensions.
+%     Score = -0.514643 (regressionFit = 0.514642, penalties=1.12E-6) for clause:  father(A, _) :- male(A).  [covers 12.0/17.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -0.514643): father(A, _) :- male(A).  [covers 12.0/17.0 pos, 0.0/0.0 neg]
+%     Score = -0.355407 (regressionFit = 0.355406, penalties=1.12E-6) for clause:  father(_, A) :- male(A).  [covers 11.0/17.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -0.355407): father(_, A) :- male(A).  [covers 11.0/17.0 pos, 0.0/0.0 neg]
+%     Score = -0.481222 (regressionFit = 0.481220, penalties=1.0200000000000002E-6) for clause:  father(A, B) :- childof(B, A).  [covers 7.0/17.0 pos, 0.0/0.0 neg]
+%     Score = -0.468688 (regressionFit = 0.468687, penalties=1.23E-6) for clause:  father(A, _) :- siblingof(A, _).  [covers 7.0/17.0 pos, 0.0/0.0 neg]
+
+% The best node found: father(_, A) :- male(A).  [covers 11.0/17.0 pos, 0.0/0.0 neg]
+
+% The best node found: father(_, A) :- male(A).  [covers 11.0/17.0 pos, 0.0/0.0 neg]
+
+% Expanding node at Level 0 with score = 1.797693e+308.
+% Will extend: father(_, A) :- male(A).  [covers 11.0/17.0 pos, 0.0/0.0 neg]
+Comparing variance: 0.01957405132848998 to score=0.0025 #egs=11.0
+Comparing variance: 0.023348517665333482 to score=0.0025 #egs=6.0
+%   Creating a TRUE-branch interior node with wgtedCountTrueBranchPos = 11.0
+%      addToQueueOfTreeStructuredLearningTasks (level=1; score=-0.019574)
+%         ILP node to extend: father(_, A) :- male(A).  [covers 11.0/17.0 pos, 0.0/0.0 neg]
+%      Insert tree-structured search node (@ level = 1 and with score = -0.019574) into the LAST position (#1) in the search queue.
+%   Creating a FALSE-branch leaf because wgtedCountFalseBranchPos = 6.0 < 2.1 * minPosCov = 6.3
+
+% Time for loop #1: 6 milliseconds.
+% Internal node max length = 1
+% Max tree depth in lits   = 12
+% Max tree depth in nodes  = 3
+% Max number of clauses    = 8
+
+% On cycle #1, the best clause found is:
+%      father(_, A) :- male(A).  [covers 11.0/17.0 pos, 0.0/0.0 neg]
+% This clause covers 11 positive examples, of which 11 are newly covered.
+% It also covers 0 negative examples, of which 0 are newly covered.
+
+% Working on expanding this node: 'father(_, A) :- male(A).  [covers 11.0/11.0 pos, 0.0/0.0 neg]'
+%     Score = -0.355407 (regressionFit = 0.355406, penalties=1.12E-6) for clause:  father(_, A) :- male(A).  [covers 11.0/11.0 pos, 0.0/0.0 neg]
+
+% Have these 6 positive seeds: 1 3 4 5 6 8
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% Consider expanding [#1 of outerLoop #2, bodyLen=1] 'father(_, A) :- male(A).  [covers 11.0/11.0 pos, 0.0/0.0 neg]' score=-0.35540679060539065
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 0 variant children.  Sending 3 items to OPEN for evaluation and possible insertion.
+% Have created 3 valid-on-seeds descendants and have picked up 7 bad extensions.
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.9200000000000003E-6) for clause:  father(A, B) :- male(B), male(A).  [covers 9.0/11.0 pos, 0.0/0.0 neg]
+%     Score = -0.000002 (regressionFit = 5.55112e-17, penalties=2.0200000000000006E-6) for clause:  father(A, B) :- male(B), childof(B, A).  [covers 5.0/11.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -0.000002): father(A, B) :- male(B), childof(B, A).  [covers 5.0/11.0 pos, 0.0/0.0 neg]
+%     Score = -0.213164 (regressionFit = 0.213161, penalties=2.1300000000000004E-6) for clause:  father(A, B) :- male(B), siblingof(A, _).  [covers 6.0/11.0 pos, 0.0/0.0 neg]
+
+% The best node found: father(A, B) :- male(B), childof(B, A).  [covers 5.0/11.0 pos, 0.0/0.0 neg]
+
+% The best node found: father(A, B) :- male(B), childof(B, A).  [covers 5.0/11.0 pos, 0.0/0.0 neg]
+
+% Expanding node at Level 1 with score = -0.020.
+% Will extend: father(A, B) :- male(B), childof(B, A).  [covers 5.0/11.0 pos, 0.0/0.0 neg]
+Comparing variance: 1.1102230246251566E-17 to score=0.0025 #egs=5.0
+Comparing variance: 0.0 to score=0.0025 #egs=6.0
+%   Creating a TRUE-branch leaf because wgtedCountTrueBranchPos = 5.0 < 2.1 * minPosCov = 6.3
+%   Creating a FALSE-branch leaf because wgtedCountFalseBranchPos = 6.0 < 2.1 * minPosCov = 6.3
+
+% Time for loop #2: 6 milliseconds.
+% Internal node max length = 1
+% Max tree depth in lits   = 12
+% Max tree depth in nodes  = 3
+% Max number of clauses    = 8
+
+% On cycle #2, the best clause found is:
+%      father(A, B) :- male(B), childof(B, A).  [covers 5.0/11.0 pos, 0.0/0.0 neg]
+% This clause covers 5 positive examples, of which 5 are newly covered.
+% It also covers 0 negative examples, of which 0 are newly covered.
+
+% ******************************************
+
+%  Have stopped ILP's outer loop because the tree-structured queue is empty.
+
+% ******************************************
+
+%%%%%  WILL-Produced Tree #8 @ 16:32:28 12/28/16.  [Using 1,534,976 memory cells.]  %%%%%
+
+
+% FOR father(A, B):
+%   if ( male(B) )
+%   then if ( childof(B, A) )
+%   | then return 0.2075224231901097;  // std dev = 7.45e-09, 5.000 (wgt'ed) examples reached here.  /* #pos=5 */
+%   | else return -0.07345564302071796;  // std dev = 0.000, 6.000 (wgt'ed) examples reached here.  /* #neg=6 */
+%   else return -0.15597004045858942;  // std dev = 0.374, 6.000 (wgt'ed) examples reached here.  /* #neg=6 */
+
+
+% Clauses:
+
+father(A, B, 0.2075224231901097) :- 
+     male(B), 
+     childof(B, A), 
+     !. // Clause #1.
+
+father(A, B, -0.07345564302071796) :- 
+     male(B), 
+     !. // Clause #2.
+
+father(A, B, -0.15597004045858942) :- !. // Clause #3.
+
+
+% The flattened versions of these clauses:
+
+flattened_father(a, b, 0.2075224231901097) :-  /* #pos=5 */ 
+   male(b),
+   childof(b, a),
+   !. // Flattened version of clause #1.
+
+flattened_father(underscore, a, -0.07345564302071796) :-  /* #neg=6 */ 
+   male(a),
+   !. // Flattened version of clause #2.
+
+flattened_father(underscore, underscore, -0.15597004045858942) :-  /* #neg=6 */ 
+   !. // Flattened version of clause #3.
+
+
+% The unique flattened literals:
+%   male(a)
+%   childof(b, a)
+%   male(b)
+
+% Saving model in: train/models/bRDNs/father.model.ckpt
+% Time taken to learn 8 trees is 652 milliseconds.
+
+%      addToQueueOfTreeStructuredLearningTasks (level=0; score=1.797693135e+308)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 0 and with score = 1.797693135e+308) into the LAST position (#1) in the search queue.
+Variance:0.01957405132848998
+Set score:0.0025
+% Only 17 out of 17 converged.
+% Kept 5 of the 5 positive examples.
+% Kept 10 of the 21 negative examples.
+% Dataset size: 15
+Computing probabilities
+prob time:2 milliseconds
+No hidden examples for : father
+Time to build dataset: 2 milliseconds
+%      addToQueueOfTreeStructuredLearningTasks (level=0; score=1.797693135e+308)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 0 and with score = 1.797693135e+308) into the LAST position (#1) in the search queue.
+Variance:0.012450586310645545
+Set score:0.0025
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% Have these 5 positive seeds: 4 5 12 13 14
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% target           = father(D, E)
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.2E-7) for clause:  father(_, _).  [covers 15.0/15.0 pos, 0.0/0.0 neg]
+% Most-general root: father(_, _).  [covers 15.0/15.0 pos, 0.0/0.0 neg]  score = -Infinity
+
+% Consider expanding [#1 of outerLoop #1, bodyLen=0] 'father(_, _).  [covers 15.0/15.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 0 variant children.  Sending 7 items to OPEN for evaluation and possible insertion.
+% Have created 7 valid-on-seeds descendants and have picked up 5 bad extensions.
+%     Score = -0.186115 (regressionFit = 0.186114, penalties=1.12E-6) for clause:  father(A, _) :- male(A).  [covers 11.0/15.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -0.186115): father(A, _) :- male(A).  [covers 11.0/15.0 pos, 0.0/0.0 neg]
+%     Score = -0.173767 (regressionFit = 0.173766, penalties=1.12E-6) for clause:  father(_, A) :- male(A).  [covers 12.0/15.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -0.173767): father(_, A) :- male(A).  [covers 12.0/15.0 pos, 0.0/0.0 neg]
+%     Score = -0.001687 (regressionFit = 0.001686, penalties=1.0200000000000002E-6) for clause:  father(A, B) :- childof(B, A).  [covers 5.0/15.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -0.001687): father(A, B) :- childof(B, A).  [covers 5.0/15.0 pos, 0.0/0.0 neg]
+%     Score = -0.158390 (regressionFit = 0.158389, penalties=1.0200000000000002E-6) for clause:  father(A, B) :- siblingof(A, B).  [covers 3.0/15.0 pos, 0.0/0.0 neg]
+%     Score = -0.185784 (regressionFit = 0.185783, penalties=1.23E-6) for clause:  father(A, _) :- siblingof(A, _).  [covers 8.0/15.0 pos, 0.0/0.0 neg]
+%     Score = -0.158390 (regressionFit = 0.158389, penalties=1.0200000000000002E-6) for clause:  father(A, B) :- siblingof(B, A).  [covers 3.0/15.0 pos, 0.0/0.0 neg]
+%     Score = -0.158390 (regressionFit = 0.158389, penalties=1.23E-6) for clause:  father(_, A) :- siblingof(A, _).  [covers 3.0/15.0 pos, 0.0/0.0 neg]
+
+% The best node found: father(A, B) :- childof(B, A).  [covers 5.0/15.0 pos, 0.0/0.0 neg]
+
+% The best node found: father(A, B) :- childof(B, A).  [covers 5.0/15.0 pos, 0.0/0.0 neg]
+
+% Expanding node at Level 0 with score = 1.797693e+308.
+% Will extend: father(A, B) :- childof(B, A).  [covers 5.0/15.0 pos, 0.0/0.0 neg]
+Comparing variance: 0.0 to score=0.0025 #egs=5.0
+Comparing variance: 1.6855802100165448E-4 to score=0.0025 #egs=10.0
+%   Creating a TRUE-branch leaf because wgtedCountTrueBranchPos = 5.0 < 2.1 * minPosCov = 6.3
+%   Creating a FALSE-branch leaf because good enough fit since score < 0.0025
+
+% Time for loop #1: 6 milliseconds.
+% Internal node max length = 1
+% Max tree depth in lits   = 12
+% Max tree depth in nodes  = 3
+% Max number of clauses    = 8
+
+% On cycle #1, the best clause found is:
+%      father(A, B) :- childof(B, A).  [covers 5.0/15.0 pos, 0.0/0.0 neg]
+% This clause covers 5 positive examples, of which 5 are newly covered.
+% It also covers 0 negative examples, of which 0 are newly covered.
+
+% ******************************************
+
+%  Have stopped ILP's outer loop because the tree-structured queue is empty.
+
+% ******************************************
+
+%%%%%  WILL-Produced Tree #9 @ 16:32:28 12/28/16.  [Using 1,550,176 memory cells.]  %%%%%
+
+
+% FOR father(A, B):
+%   if ( childof(B, A) )
+%   then return 0.17545527232452496;  // std dev = 0.000, 5.000 (wgt'ed) examples reached here.  /* #pos=5 */
+%   else return -0.06017571955663655;  // std dev = 0.041, 10.000 (wgt'ed) examples reached here.  /* #neg=10 */
+
+
+% Clauses:
+
+father(A, B, 0.17545527232452496) :- 
+     childof(B, A), 
+     !. // Clause #1.
+
+father(A, B, -0.06017571955663655) :- !. // Clause #2.
+
+
+% The flattened versions of these clauses:
+
+flattened_father(a, b, 0.17545527232452496) :-  /* #pos=5 */ 
+   childof(b, a),
+   !. // Flattened version of clause #1.
+
+flattened_father(underscore, underscore, -0.06017571955663655) :-  /* #neg=10 */ 
+   !. // Flattened version of clause #2.
+
+
+% The unique flattened literals:
+%   childof(b, a)
+
+% Saving model in: train/models/bRDNs/father.model.ckpt
+% Time taken to learn 9 trees is 725 milliseconds.
+
+%      addToQueueOfTreeStructuredLearningTasks (level=0; score=1.797693135e+308)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 0 and with score = 1.797693135e+308) into the LAST position (#1) in the search queue.
+Variance:0.012450586310645545
+Set score:0.0025
+% Only 15 out of 15 converged.
+% Kept 5 of the 5 positive examples.
+% Kept 9 of the 21 negative examples.
+% Dataset size: 14
+Computing probabilities
+prob time:1 milliseconds
+No hidden examples for : father
+Time to build dataset: 1 milliseconds
+%      addToQueueOfTreeStructuredLearningTasks (level=0; score=1.797693135e+308)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 0 and with score = 1.797693135e+308) into the LAST position (#1) in the search queue.
+Variance:0.021445646651270307
+Set score:0.0025
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% Have these 8 positive seeds: 1 2 3 4 5 8 10 12
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% target           = father(D, E)
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.2E-7) for clause:  father(_, _).  [covers 14.0/14.0 pos, 0.0/0.0 neg]
+% Most-general root: father(_, _).  [covers 14.0/14.0 pos, 0.0/0.0 neg]  score = -Infinity
+
+% Consider expanding [#1 of outerLoop #1, bodyLen=0] 'father(_, _).  [covers 14.0/14.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 0 variant children.  Sending 4 items to OPEN for evaluation and possible insertion.
+% Have created 4 valid-on-seeds descendants and have picked up 7 bad extensions.
+%     Score = -0.300231 (regressionFit = 0.300230, penalties=1.12E-6) for clause:  father(A, _) :- male(A).  [covers 10.0/14.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -0.300231): father(A, _) :- male(A).  [covers 10.0/14.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.12E-6) for clause:  father(_, A) :- male(A).  [covers 12.0/14.0 pos, 0.0/0.0 neg]
+%     Score = -0.248754 (regressionFit = 0.248753, penalties=1.0200000000000002E-6) for clause:  father(A, B) :- childof(B, A).  [covers 6.0/14.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -0.248754): father(A, B) :- childof(B, A).  [covers 6.0/14.0 pos, 0.0/0.0 neg]
+%     Score = -0.251695 (regressionFit = 0.251694, penalties=1.23E-6) for clause:  father(A, _) :- siblingof(A, _).  [covers 5.0/14.0 pos, 0.0/0.0 neg]
+
+% The best node found: father(A, B) :- childof(B, A).  [covers 6.0/14.0 pos, 0.0/0.0 neg]
+
+% The best node found: father(A, B) :- childof(B, A).  [covers 6.0/14.0 pos, 0.0/0.0 neg]
+
+% Expanding node at Level 0 with score = 1.797693e+308.
+% Will extend: father(A, B) :- childof(B, A).  [covers 6.0/14.0 pos, 0.0/0.0 neg]
+Comparing variance: 0.04138344830891945 to score=0.0025 #egs=6.0
+Comparing variance: 5.651977577930808E-5 to score=0.0025 #egs=8.0
+%   Creating a TRUE-branch leaf because wgtedCountTrueBranchPos = 6.0 < 2.1 * minPosCov = 6.3
+%   Creating a FALSE-branch leaf because good enough fit since score < 0.0025
+
+% Time for loop #1: 4 milliseconds.
+% Internal node max length = 1
+% Max tree depth in lits   = 12
+% Max tree depth in nodes  = 3
+% Max number of clauses    = 8
+
+% On cycle #1, the best clause found is:
+%      father(A, B) :- childof(B, A).  [covers 6.0/14.0 pos, 0.0/0.0 neg]
+% This clause covers 6 positive examples, of which 6 are newly covered.
+% It also covers 0 negative examples, of which 0 are newly covered.
+
+% ******************************************
+
+%  Have stopped ILP's outer loop because the tree-structured queue is empty.
+
+% ******************************************
+
+%%%%%  WILL-Produced Tree #10 @ 16:32:28 12/28/16.  [Using 1,553,696 memory cells.]  %%%%%
+
+
+% FOR father(A, B):
+%   if ( childof(B, A) )
+%   then return 0.060521366052186026;  // std dev = 0.498, 6.000 (wgt'ed) examples reached here.  /* #neg=1 #pos=5 */
+%   else return -0.0620217276275192;  // std dev = 0.021, 8.000 (wgt'ed) examples reached here.  /* #neg=8 */
+
+
+% Clauses:
+
+father(A, B, 0.060521366052186026) :- 
+     childof(B, A), 
+     !. // Clause #1.
+
+father(A, B, -0.0620217276275192) :- !. // Clause #2.
+
+
+% The flattened versions of these clauses:
+
+flattened_father(a, b, 0.060521366052186026) :-  /* #neg=1 #pos=5 */ 
+   childof(b, a),
+   !. // Flattened version of clause #1.
+
+flattened_father(underscore, underscore, -0.0620217276275192) :-  /* #neg=8 */ 
+   !. // Flattened version of clause #2.
+
+
+% The unique flattened literals:
+%   childof(b, a)
+
+% Saving model in: train/models/bRDNs/father.model.ckpt
+% Saving model in: train/models/bRDNs/father.model
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%  Final call for computing score for father.  %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+stepLength_tree1(1.0).
+stepLength_tree2(1.0).
+stepLength_tree3(1.0).
+stepLength_tree4(1.0).
+stepLength_tree5(1.0).
+stepLength_tree6(1.0).
+stepLength_tree7(1.0).
+stepLength_tree8(1.0).
+stepLength_tree9(1.0).
+stepLength_tree10(1.0).
+
+logPrior(-1.8).
+father(D, E, Total) :- // A general accessor. 
+   father(D, E, 1000000, Total), !.
+father(D, E, Total) :- waitHere("This should not fail", father(D, E, Total)).
+
+father(D, E, TreesToUse, Total) :- // A tree-limited accessor (e.g., for tuning the number of trees to use).
+   logPrior(LogPrior),
+   getScore_father_tree1(D, E, TreesToUse, Total1),
+   getScore_father_tree2(D, E, TreesToUse, Total2),
+   getScore_father_tree3(D, E, TreesToUse, Total3),
+   getScore_father_tree4(D, E, TreesToUse, Total4),
+   getScore_father_tree5(D, E, TreesToUse, Total5),
+   getScore_father_tree6(D, E, TreesToUse, Total6),
+   getScore_father_tree7(D, E, TreesToUse, Total7),
+   getScore_father_tree8(D, E, TreesToUse, Total8),
+   getScore_father_tree9(D, E, TreesToUse, Total9),
+   getScore_father_tree10(D, E, TreesToUse, Total10),
+   Total is LogPrior + Total1 + Total2 + Total3 + Total4 + Total5 + Total6 + Total7 + Total8 + Total9 + Total10,
+   !.
+father(D, E, TreesToUse, Total) :- waitHere("This should not fail", father(D, E, TreesToUse, Total)).
+
+getScore_father_tree1(D, E, TreesToUse, 0.0) :- 1 > TreesToUse, !.
+getScore_father_tree1(D, E, TreesToUse, Total1) :- father_tree1(D, E, Total), stepLength_tree1(StepLen), Total1 is Total * StepLen.
+
+getScore_father_tree2(D, E, TreesToUse, 0.0) :- 2 > TreesToUse, !.
+getScore_father_tree2(D, E, TreesToUse, Total2) :- father_tree2(D, E, Total), stepLength_tree2(StepLen), Total2 is Total * StepLen.
+
+getScore_father_tree3(D, E, TreesToUse, 0.0) :- 3 > TreesToUse, !.
+getScore_father_tree3(D, E, TreesToUse, Total3) :- father_tree3(D, E, Total), stepLength_tree3(StepLen), Total3 is Total * StepLen.
+
+getScore_father_tree4(D, E, TreesToUse, 0.0) :- 4 > TreesToUse, !.
+getScore_father_tree4(D, E, TreesToUse, Total4) :- father_tree4(D, E, Total), stepLength_tree4(StepLen), Total4 is Total * StepLen.
+
+getScore_father_tree5(D, E, TreesToUse, 0.0) :- 5 > TreesToUse, !.
+getScore_father_tree5(D, E, TreesToUse, Total5) :- father_tree5(D, E, Total), stepLength_tree5(StepLen), Total5 is Total * StepLen.
+
+getScore_father_tree6(D, E, TreesToUse, 0.0) :- 6 > TreesToUse, !.
+getScore_father_tree6(D, E, TreesToUse, Total6) :- father_tree6(D, E, Total), stepLength_tree6(StepLen), Total6 is Total * StepLen.
+
+getScore_father_tree7(D, E, TreesToUse, 0.0) :- 7 > TreesToUse, !.
+getScore_father_tree7(D, E, TreesToUse, Total7) :- father_tree7(D, E, Total), stepLength_tree7(StepLen), Total7 is Total * StepLen.
+
+getScore_father_tree8(D, E, TreesToUse, 0.0) :- 8 > TreesToUse, !.
+getScore_father_tree8(D, E, TreesToUse, Total8) :- father_tree8(D, E, Total), stepLength_tree8(StepLen), Total8 is Total * StepLen.
+
+getScore_father_tree9(D, E, TreesToUse, 0.0) :- 9 > TreesToUse, !.
+getScore_father_tree9(D, E, TreesToUse, Total9) :- father_tree9(D, E, Total), stepLength_tree9(StepLen), Total9 is Total * StepLen.
+
+getScore_father_tree10(D, E, TreesToUse, 0.0) :- 10 > TreesToUse, !.
+getScore_father_tree10(D, E, TreesToUse, Total10) :- father_tree10(D, E, Total), stepLength_tree10(StepLen), Total10 is Total * StepLen.
+
+flattenedLiteralsInThisSetOfTrees(father, 3, [
+   male(a),
+   childof(b, a),
+   male(b)]).
+%      addToQueueOfTreeStructuredLearningTasks (level=0; score=1.797693135e+308)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 0 and with score = 1.797693135e+308) into the LAST position (#1) in the search queue.
+Variance:5.295781490933244
+Set score:0.0025
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% Have these 8 positive seeds: 6 15 42 43 45 56 77 86
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% target           = father(D, E)
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.2E-7) for clause:  father(_, _).  [covers 124.0/124.0 pos, 0.0/0.0 neg]
+% Most-general root: father(_, _).  [covers 124.0/124.0 pos, 0.0/0.0 neg]  score = -Infinity
+
+% Consider expanding [#1 of outerLoop #1, bodyLen=0] 'father(_, _).  [covers 124.0/124.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 0 variant children.  Sending 7 items to OPEN for evaluation and possible insertion.
+% Have created 7 valid-on-seeds descendants and have picked up 5 bad extensions.
+%     Score = -617.913293 (regressionFit = 617.913292, penalties=1.12E-6) for clause:  father(A, _) :- male(A).  [covers 84.0/124.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -617.913293): father(A, _) :- male(A).  [covers 84.0/124.0 pos, 0.0/0.0 neg]
+%     Score = -514.014595 (regressionFit = 514.014594, penalties=1.12E-6) for clause:  father(_, A) :- male(A).  [covers 94.0/124.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -514.014595): father(_, A) :- male(A).  [covers 94.0/124.0 pos, 0.0/0.0 neg]
+%     Score = -108.395874 (regressionFit = 108.395873, penalties=1.0200000000000002E-6) for clause:  father(A, B) :- childof(B, A).  [covers 54.0/124.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -108.395874): father(A, B) :- childof(B, A).  [covers 54.0/124.0 pos, 0.0/0.0 neg]
+%     Score = -621.593928 (regressionFit = 621.593927, penalties=1.0200000000000002E-6) for clause:  father(A, B) :- siblingof(A, B).  [covers 10.0/124.0 pos, 0.0/0.0 neg]
+%     Score = -651.154342 (regressionFit = 651.154340, penalties=1.23E-6) for clause:  father(A, _) :- siblingof(A, _).  [covers 67.0/124.0 pos, 0.0/0.0 neg]
+%     Score = -621.593928 (regressionFit = 621.593927, penalties=1.0200000000000002E-6) for clause:  father(A, B) :- siblingof(B, A).  [covers 10.0/124.0 pos, 0.0/0.0 neg]
+%     Score = -621.593928 (regressionFit = 621.593927, penalties=1.23E-6) for clause:  father(_, A) :- siblingof(A, _).  [covers 10.0/124.0 pos, 0.0/0.0 neg]
+
+% The best node found: father(A, B) :- childof(B, A).  [covers 54.0/124.0 pos, 0.0/0.0 neg]
+
+% The best node found: father(A, B) :- childof(B, A).  [covers 54.0/124.0 pos, 0.0/0.0 neg]
+
+% Expanding node at Level 0 with score = 1.797693e+308.
+% Will extend: father(A, B) :- childof(B, A).  [covers 54.0/124.0 pos, 0.0/0.0 neg]
+Comparing variance: 1.9884613342133126 to score=0.0025 #egs=54.0
+Comparing variance: 0.014556588730579178 to score=0.0025 #egs=70.0
+%   Creating a TRUE-branch interior node with wgtedCountTrueBranchPos = 54.0
+%      addToQueueOfTreeStructuredLearningTasks (level=1; score=-1.988461)
+%         ILP node to extend: father(A, B) :- childof(B, A).  [covers 54.0/124.0 pos, 0.0/0.0 neg]
+%      Insert tree-structured search node (@ level = 1 and with score = -1.988461) into the LAST position (#1) in the search queue.
+%   Creating a FALSE-branch interior node with wgtedCountFalseBranchPos = 70.0
+%      addToQueueOfTreeStructuredLearningTasks (level=1; score=-0.014557)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 1 and with score = -0.014557) into the LAST position (#2) in the search queue.
+
+% Time for loop #1: 15 milliseconds.
+% Internal node max length = 1
+% Max tree depth in lits   = 12
+% Max tree depth in nodes  = 3
+% Max number of clauses    = 8
+
+% On cycle #1, the best clause found is:
+%      father(A, B) :- childof(B, A).  [covers 54.0/124.0 pos, 0.0/0.0 neg]
+% This clause covers 54 positive examples, of which 54 are newly covered.
+% It also covers 0 negative examples, of which 0 are newly covered.
+
+% Working on expanding this node: 'father(A, B) :- childof(B, A).  [covers 54.0/54.0 pos, 0.0/0.0 neg]'
+%     Score = -108.395874 (regressionFit = 108.395873, penalties=1.0200000000000002E-6) for clause:  father(A, B) :- childof(B, A).  [covers 54.0/54.0 pos, 0.0/0.0 neg]
+
+% Have these 8 positive seeds: 11 16 19 21 22 24 34 44
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% Consider expanding [#1 of outerLoop #2, bodyLen=1] 'father(A, B) :- childof(B, A).  [covers 54.0/54.0 pos, 0.0/0.0 neg]' score=-108.39587427865943
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 0 variant children.  Sending 3 items to OPEN for evaluation and possible insertion.
+% Have created 3 valid-on-seeds descendants and have picked up 7 bad extensions.
+%     Score = -82.833620 (regressionFit = 82.833618, penalties=2.0200000000000006E-6) for clause:  father(A, B) :- childof(B, A), male(A).  [covers 40.0/54.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -82.833620): father(A, B) :- childof(B, A), male(A).  [covers 40.0/54.0 pos, 0.0/0.0 neg]
+%     Score = -0.000002 (regressionFit = -1.70530e-12, penalties=2.0200000000000006E-6) for clause:  father(A, B) :- childof(B, A), male(B).  [covers 50.0/54.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -0.000002): father(A, B) :- childof(B, A), male(B).  [covers 50.0/54.0 pos, 0.0/0.0 neg]
+%     Score = -102.323883 (regressionFit = 102.323881, penalties=2.1300000000000004E-6) for clause:  father(A, B) :- childof(B, A), siblingof(A, _).  [covers 34.0/54.0 pos, 0.0/0.0 neg]
+
+% The best node found: father(A, B) :- childof(B, A), male(B).  [covers 50.0/54.0 pos, 0.0/0.0 neg]
+
+% The best node found: father(A, B) :- childof(B, A), male(B).  [covers 50.0/54.0 pos, 0.0/0.0 neg]
+
+% Expanding node at Level 1 with score = -1.988.
+% Will extend: father(A, B) :- childof(B, A), male(B).  [covers 50.0/54.0 pos, 0.0/0.0 neg]
+Comparing variance: -3.410605131648481E-14 to score=0.0025 #egs=50.0
+Comparing variance: 0.0 to score=0.0025 #egs=4.0
+%   Creating a TRUE-branch leaf because good enough fit since score < 0.0025
+%   Creating a FALSE-branch leaf because wgtedCountFalseBranchPos = 4.0 < 2.1 * minPosCov = 6.3
+
+% Time for loop #2: 11 milliseconds.
+% Internal node max length = 1
+% Max tree depth in lits   = 12
+% Max tree depth in nodes  = 3
+% Max number of clauses    = 8
+
+% On cycle #2, the best clause found is:
+%      father(A, B) :- childof(B, A), male(B).  [covers 50.0/54.0 pos, 0.0/0.0 neg]
+% This clause covers 50 positive examples, of which 50 are newly covered.
+% It also covers 0 negative examples, of which 0 are newly covered.
+
+% Have these 8 positive seeds: 10 18 27 30 37 46 48 49
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% target           = father(D, E)
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.2E-7) for clause:  father(_, _).  [covers 70.0/70.0 pos, 0.0/0.0 neg]
+% Most-general root: father(_, _).  [covers 70.0/70.0 pos, 0.0/0.0 neg]  score = -Infinity
+
+% Consider expanding [#1 of outerLoop #3, bodyLen=0] 'father(_, _).  [covers 70.0/70.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 0 variant children.  Sending 6 items to OPEN for evaluation and possible insertion.
+% Have created 6 valid-on-seeds descendants and have picked up 6 bad extensions.
+%     Score = -0.785291 (regressionFit = 0.785290, penalties=1.12E-6) for clause:  father(A, _) :- male(A).  [covers 44.0/70.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -0.785291): father(A, _) :- male(A).  [covers 44.0/70.0 pos, 0.0/0.0 neg]
+%     Score = -0.894728 (regressionFit = 0.894727, penalties=1.12E-6) for clause:  father(_, A) :- male(A).  [covers 44.0/70.0 pos, 0.0/0.0 neg]
+%     Score = -0.988679 (regressionFit = 0.988678, penalties=1.0200000000000002E-6) for clause:  father(A, B) :- siblingof(A, B).  [covers 10.0/70.0 pos, 0.0/0.0 neg]
+%     Score = -1.000589 (regressionFit = 1.000588, penalties=1.23E-6) for clause:  father(A, _) :- siblingof(A, _).  [covers 33.0/70.0 pos, 0.0/0.0 neg]
+%     Score = -0.988679 (regressionFit = 0.988678, penalties=1.0200000000000002E-6) for clause:  father(A, B) :- siblingof(B, A).  [covers 10.0/70.0 pos, 0.0/0.0 neg]
+%     Score = -0.988679 (regressionFit = 0.988678, penalties=1.23E-6) for clause:  father(_, A) :- siblingof(A, _).  [covers 10.0/70.0 pos, 0.0/0.0 neg]
+
+% The best node found: father(A, _) :- male(A).  [covers 44.0/70.0 pos, 0.0/0.0 neg]
+
+% The best node found: father(A, _) :- male(A).  [covers 44.0/70.0 pos, 0.0/0.0 neg]
+
+% Expanding node at Level 1 with score = -0.015.
+% Will extend: father(A, _) :- male(A).  [covers 44.0/70.0 pos, 0.0/0.0 neg]
+Comparing variance: 0.00745791992569825 to score=0.0025 #egs=44.0
+Comparing variance: 0.017582362908761147 to score=0.0025 #egs=26.0
+%   Creating a TRUE-branch interior node with wgtedCountTrueBranchPos = 44.0
+%      addToQueueOfTreeStructuredLearningTasks (level=2; score=-0.007458)
+%         ILP node to extend: father(A, _) :- male(A).  [covers 44.0/70.0 pos, 0.0/0.0 neg]
+%      Insert tree-structured search node (@ level = 2 and with score = -0.007458) into the LAST position (#1) in the search queue.
+%   Creating a FALSE-branch interior node with wgtedCountFalseBranchPos = 26.0
+%      addToQueueOfTreeStructuredLearningTasks (level=2; score=-0.017582)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 2 and with score = -0.017582) into position #1 in the search queue (new size=2).
+
+% Time for loop #3: 10 milliseconds.
+% Internal node max length = 1
+% Max tree depth in lits   = 12
+% Max tree depth in nodes  = 3
+% Max number of clauses    = 8
+
+% On cycle #3, the best clause found is:
+%      father(A, _) :- male(A).  [covers 44.0/70.0 pos, 0.0/0.0 neg]
+% This clause covers 44 positive examples, of which 44 are newly covered.
+% It also covers 0 negative examples, of which 0 are newly covered.
+
+% Have these 8 positive seeds: 3 4 6 10 11 12 13 15
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% target           = father(D, E)
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.2E-7) for clause:  father(_, _).  [covers 26.0/26.0 pos, 0.0/0.0 neg]
+% Most-general root: father(_, _).  [covers 26.0/26.0 pos, 0.0/0.0 neg]  score = -Infinity
+
+% Consider expanding [#1 of outerLoop #4, bodyLen=0] 'father(_, _).  [covers 26.0/26.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 0 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants and have picked up 9 bad extensions.
+%     Score = -0.262679 (regressionFit = 0.262677, penalties=1.12E-6) for clause:  father(_, A) :- male(A).  [covers 20.0/26.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -0.262679): father(_, A) :- male(A).  [covers 20.0/26.0 pos, 0.0/0.0 neg]
+%     Score = -0.441050 (regressionFit = 0.441049, penalties=1.23E-6) for clause:  father(A, _) :- siblingof(A, _).  [covers 6.0/26.0 pos, 0.0/0.0 neg]
+
+% The best node found: father(_, A) :- male(A).  [covers 20.0/26.0 pos, 0.0/0.0 neg]
+
+% The best node found: father(_, A) :- male(A).  [covers 20.0/26.0 pos, 0.0/0.0 neg]
+
+% Expanding node at Level 2 with score = -0.018.
+% Will extend: father(_, A) :- male(A).  [covers 20.0/26.0 pos, 0.0/0.0 neg]
+Comparing variance: 0.013133874821000636 to score=0.0025 #egs=20.0
+Comparing variance: 0.0 to score=0.0025 #egs=6.0
+%   Creating a TRUE-branch interior node with wgtedCountTrueBranchPos = 20.0
+%      addToQueueOfTreeStructuredLearningTasks (level=3; score=-0.013134)
+%         ILP node to extend: father(_, A) :- male(A).  [covers 20.0/26.0 pos, 0.0/0.0 neg]
+%      Insert tree-structured search node (@ level = 3 and with score = -0.013134) into position #1 in the search queue (new size=2).
+%   Creating a FALSE-branch leaf because wgtedCountFalseBranchPos = 6.0 < 2.1 * minPosCov = 6.3
+
+% Time for loop #4: 7 milliseconds.
+% Internal node max length = 1
+% Max tree depth in lits   = 12
+% Max tree depth in nodes  = 3
+% Max number of clauses    = 8
+
+% On cycle #4, the best clause found is:
+%      father(_, A) :- male(A).  [covers 20.0/26.0 pos, 0.0/0.0 neg]
+% This clause covers 20 positive examples, of which 20 are newly covered.
+% It also covers 0 negative examples, of which 0 are newly covered.
+
+% Working on expanding this node: 'father(_, A) :- male(A).  [covers 20.0/20.0 pos, 0.0/0.0 neg]'
+%     Score = -0.262679 (regressionFit = 0.262677, penalties=1.12E-6) for clause:  father(_, A) :- male(A).  [covers 20.0/20.0 pos, 0.0/0.0 neg]
+
+% Have these 8 positive seeds: 1 3 5 6 7 8 11 13
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% Consider expanding [#1 of outerLoop #5, bodyLen=1] 'father(_, A) :- male(A).  [covers 20.0/20.0 pos, 0.0/0.0 neg]' score=-0.2626786164200127
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 0 variant children.  Sending 1 items to OPEN for evaluation and possible insertion.
+% Have created 1 valid-on-seeds descendants and have picked up 9 bad extensions.
+%     Score = -0.188879 (regressionFit = 0.188876, penalties=2.1300000000000004E-6) for clause:  father(A, B) :- male(B), siblingof(A, _).  [covers 6.0/20.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -0.188879): father(A, B) :- male(B), siblingof(A, _).  [covers 6.0/20.0 pos, 0.0/0.0 neg]
+
+% The best node found: father(A, B) :- male(B), siblingof(A, _).  [covers 6.0/20.0 pos, 0.0/0.0 neg]
+
+% The best node found: father(A, B) :- male(B), siblingof(A, _).  [covers 6.0/20.0 pos, 0.0/0.0 neg]
+
+% Expanding node at Level 3 with score = -0.013.
+% Will extend: father(A, B) :- male(B), siblingof(A, _).  [covers 6.0/20.0 pos, 0.0/0.0 neg]
+%   Creating a TRUE-branch and FALSE-branch leaves because level = 3 >= 3
+
+% Time for loop #5: 3 milliseconds.
+% Internal node max length = 1
+% Max tree depth in lits   = 12
+% Max tree depth in nodes  = 3
+% Max number of clauses    = 8
+
+% On cycle #5, the best clause found is:
+%      father(A, B) :- male(B), siblingof(A, _).  [covers 6.0/20.0 pos, 0.0/0.0 neg]
+% This clause covers 6 positive examples, of which 6 are newly covered.
+% It also covers 0 negative examples, of which 0 are newly covered.
+
+% Working on expanding this node: 'father(A, _) :- male(A).  [covers 44.0/44.0 pos, 0.0/0.0 neg]'
+%     Score = -0.785291 (regressionFit = 0.785290, penalties=1.12E-6) for clause:  father(A, _) :- male(A).  [covers 44.0/44.0 pos, 0.0/0.0 neg]
+
+% Have these 8 positive seeds: 0 2 6 10 14 15 19 23
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% Consider expanding [#1 of outerLoop #6, bodyLen=1] 'father(A, _) :- male(A).  [covers 44.0/44.0 pos, 0.0/0.0 neg]' score=-0.7852910323585128
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 0 variant children.  Sending 5 items to OPEN for evaluation and possible insertion.
+% Have created 5 valid-on-seeds descendants and have picked up 6 bad extensions.
+%     Score = -0.328002 (regressionFit = 0.328000, penalties=1.9200000000000003E-6) for clause:  father(A, B) :- male(A), male(B).  [covers 24.0/44.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -0.328002): father(A, B) :- male(A), male(B).  [covers 24.0/44.0 pos, 0.0/0.0 neg]
+%     Score = -0.327598 (regressionFit = 0.327596, penalties=2.0200000000000006E-6) for clause:  father(A, B) :- male(A), siblingof(A, B).  [covers 10.0/44.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -0.327598): father(A, B) :- male(A), siblingof(A, B).  [covers 10.0/44.0 pos, 0.0/0.0 neg]
+%     Score = -0.308339 (regressionFit = 0.308337, penalties=2.2300000000000002E-6) for clause:  father(A, _) :- male(A), siblingof(A, _).  [covers 27.0/44.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -0.308339): father(A, _) :- male(A), siblingof(A, _).  [covers 27.0/44.0 pos, 0.0/0.0 neg]
+%     Score = -0.327598 (regressionFit = 0.327596, penalties=2.0200000000000006E-6) for clause:  father(A, B) :- male(A), siblingof(B, A).  [covers 10.0/44.0 pos, 0.0/0.0 neg]
+%     Score = -0.327598 (regressionFit = 0.327596, penalties=2.1300000000000004E-6) for clause:  father(A, B) :- male(A), siblingof(B, _).  [covers 10.0/44.0 pos, 0.0/0.0 neg]
+
+% The best node found: father(A, _) :- male(A), siblingof(A, _).  [covers 27.0/44.0 pos, 0.0/0.0 neg]
+
+% The best node found: father(A, _) :- male(A), siblingof(A, _).  [covers 27.0/44.0 pos, 0.0/0.0 neg]
+
+% Expanding node at Level 2 with score = -0.007.
+% Will extend: father(A, _) :- male(A), siblingof(A, _).  [covers 27.0/44.0 pos, 0.0/0.0 neg]
+Comparing variance: 0.0051731022988279396 to score=0.0025 #egs=27.0
+Comparing variance: 0.009921340009109943 to score=0.0025 #egs=17.0
+%   Creating a TRUE-branch interior node with wgtedCountTrueBranchPos = 27.0
+%      addToQueueOfTreeStructuredLearningTasks (level=3; score=-0.005173)
+%         ILP node to extend: father(A, _) :- male(A), siblingof(A, _).  [covers 27.0/44.0 pos, 0.0/0.0 neg]
+%      Insert tree-structured search node (@ level = 3 and with score = -0.005173) into the LAST position (#1) in the search queue.
+%   Creating a FALSE-branch interior node with wgtedCountFalseBranchPos = 17.0
+%      addToQueueOfTreeStructuredLearningTasks (level=3; score=-0.009921)
+%         ILP node to extend: father(A, _) :- male(A).  [covers 44.0/44.0 pos, 0.0/0.0 neg]
+%      Insert tree-structured search node (@ level = 3 and with score = -0.009921) into position #1 in the search queue (new size=2).
+
+% Time for loop #6: 9 milliseconds.
+% Internal node max length = 1
+% Max tree depth in lits   = 12
+% Max tree depth in nodes  = 3
+% Max number of clauses    = 8
+
+% On cycle #6, the best clause found is:
+%      father(A, _) :- male(A), siblingof(A, _).  [covers 27.0/44.0 pos, 0.0/0.0 neg]
+% This clause covers 27 positive examples, of which 27 are newly covered.
+% It also covers 0 negative examples, of which 0 are newly covered.
+
+% Working on expanding this node: 'father(A, _) :- male(A).  [covers 44.0/17.0 pos, 0.0/0.0 neg]'
+%     Score = -0.785291 (regressionFit = 0.785290, penalties=1.12E-6) for clause:  father(A, _) :- male(A).  [covers 17.0/17.0 pos, 0.0/0.0 neg]
+
+% Have these 8 positive seeds: 1 2 3 4 6 8 10 12
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% Consider expanding [#1 of outerLoop #7, bodyLen=1] 'father(A, _) :- male(A).  [covers 17.0/17.0 pos, 0.0/0.0 neg]' score=-0.7852910323585128
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 0 variant children.  Sending 1 items to OPEN for evaluation and possible insertion.
+% Have created 1 valid-on-seeds descendants and have picked up 14 bad extensions.
+%     Score = -0.145874 (regressionFit = 0.145872, penalties=1.9200000000000003E-6) for clause:  father(A, B) :- male(A), male(B).  [covers 8.0/17.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -0.145874): father(A, B) :- male(A), male(B).  [covers 8.0/17.0 pos, 0.0/0.0 neg]
+
+% The best node found: father(A, B) :- male(A), male(B).  [covers 8.0/17.0 pos, 0.0/0.0 neg]
+
+% The best node found: father(A, B) :- male(A), male(B).  [covers 8.0/17.0 pos, 0.0/0.0 neg]
+
+% Expanding node at Level 3 with score = -0.010.
+% Will extend: father(A, B) :- male(A), male(B).  [covers 8.0/17.0 pos, 0.0/0.0 neg]
+%   Creating a TRUE-branch and FALSE-branch leaves because level = 3 >= 3
+
+% Time for loop #7: 3 milliseconds.
+% Internal node max length = 1
+% Max tree depth in lits   = 12
+% Max tree depth in nodes  = 3
+% Max number of clauses    = 8
+
+% On cycle #7, the best clause found is:
+%      father(A, B) :- male(A), male(B).  [covers 8.0/17.0 pos, 0.0/0.0 neg]
+% This clause covers 8 positive examples, of which 8 are newly covered.
+% It also covers 0 negative examples, of which 0 are newly covered.
+
+% Working on expanding this node: 'father(A, _) :- male(A), siblingof(A, _).  [covers 27.0/27.0 pos, 0.0/0.0 neg]'
+%     Score = -0.308339 (regressionFit = 0.308337, penalties=2.2300000000000002E-6) for clause:  father(A, _) :- male(A), siblingof(A, _).  [covers 27.0/27.0 pos, 0.0/0.0 neg]
+
+% Have these 8 positive seeds: 3 4 10 11 13 15 19 21
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% Consider expanding [#1 of outerLoop #8, bodyLen=2] 'father(A, _) :- male(A), siblingof(A, _).  [covers 27.0/27.0 pos, 0.0/0.0 neg]' score=-0.30833877222322337
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 0 variant children.  Sending 10 items to OPEN for evaluation and possible insertion.
+% Have created 10 valid-on-seeds descendants and have picked up 12 bad extensions.
+%     Score = -0.126287 (regressionFit = 0.126284, penalties=3.0300000000000002E-6) for clause:  father(A, B) :- male(A), siblingof(A, _), male(B).  [covers 16.0/27.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -0.126287): father(A, B) :- male(A), siblingof(A, _), male(B).  [covers 16.0/27.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=3.0300000000000002E-6) for clause:  father(A, _) :- male(A), siblingof(A, B), male(B).  [covers 27.0/27.0 pos, 0.0/0.0 neg]
+%     Score = -0.131001 (regressionFit = 0.130998, penalties=3.0300000000000002E-6) for clause:  father(A, B) :- male(A), siblingof(A, _), siblingof(A, B).  [covers 10.0/27.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=3.240000000000001E-6) for clause:  father(A, _) :- male(A), siblingof(A, _), siblingof(A, _).  [covers 27.0/27.0 pos, 0.0/0.0 neg]
+%     Score = -0.131001 (regressionFit = 0.130998, penalties=3.0300000000000002E-6) for clause:  father(A, B) :- male(A), siblingof(A, _), siblingof(B, A).  [covers 10.0/27.0 pos, 0.0/0.0 neg]
+%     Score = -0.131001 (regressionFit = 0.130998, penalties=2.9300000000000007E-6) for clause:  father(A, B) :- male(A), siblingof(A, C), siblingof(B, C).  [covers 10.0/27.0 pos, 0.0/0.0 neg]
+%     Score = -0.131001 (regressionFit = 0.130998, penalties=3.1400000000000013E-6) for clause:  father(A, B) :- male(A), siblingof(A, _), siblingof(B, _).  [covers 10.0/27.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=3.0300000000000002E-6) for clause:  father(A, _) :- male(A), siblingof(A, B), siblingof(B, A).  [covers 27.0/27.0 pos, 0.0/0.0 neg]
+%     Score = -0.131001 (regressionFit = 0.130998, penalties=2.9300000000000007E-6) for clause:  father(A, B) :- male(A), siblingof(A, C), siblingof(C, B).  [covers 10.0/27.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=3.1400000000000013E-6) for clause:  father(A, _) :- male(A), siblingof(A, B), siblingof(B, _).  [covers 27.0/27.0 pos, 0.0/0.0 neg]
+
+% The best node found: father(A, B) :- male(A), siblingof(A, _), male(B).  [covers 16.0/27.0 pos, 0.0/0.0 neg]
+
+% The best node found: father(A, B) :- male(A), siblingof(A, _), male(B).  [covers 16.0/27.0 pos, 0.0/0.0 neg]
+
+% Expanding node at Level 3 with score = -0.005.
+% Will extend: father(A, B) :- male(A), siblingof(A, _), male(B).  [covers 16.0/27.0 pos, 0.0/0.0 neg]
+%   Creating a TRUE-branch and FALSE-branch leaves because level = 3 >= 3
+
+% Time for loop #8: 26 milliseconds.
+% Internal node max length = 1
+% Max tree depth in lits   = 12
+% Max tree depth in nodes  = 3
+% Max number of clauses    = 8
+
+% On cycle #8, the best clause found is:
+%      father(A, B) :- male(A), siblingof(A, _), male(B).  [covers 16.0/27.0 pos, 0.0/0.0 neg]
+% This clause covers 16 positive examples, of which 16 are newly covered.
+% It also covers 0 negative examples, of which 0 are newly covered.
+
+% ******************************************
+
+%  Have stopped ILP's outer loop because the tree-structured queue is empty.
+
+% ******************************************
+
+%%%%%  WILL-Produced Tree Combined @ 16:32:29 12/28/16.  [Using 1,628,848 memory cells.]  %%%%%
+
+
+% FOR father(A, B):
+%   if ( childof(B, A) )
+%   then if ( male(B) )
+%   | then return 4.099990914373896;  // std dev = 0.000, 50.000 (wgt'ed) examples reached here.  /* #pos=50 */
+%   | else return -1.2844093542568227;  // std dev = 0.000, 4.000 (wgt'ed) examples reached here.  /* #neg=4 */
+%   else if ( male(A) )
+%   | then if ( siblingof(A, C) )
+%   | | then if ( male(B) )
+%   | | | then return -0.5307259289613486;  // std dev = 0.351, 16.000 (wgt'ed) examples reached here.  /* #neg=16 */
+%   | | | else return -0.48540278451915236;  // std dev = 0.058, 11.000 (wgt'ed) examples reached here.  /* #neg=11 */
+%   | | else if ( male(B) )
+%   | | | then return -0.42984569075474466;  // std dev = 0.069, 8.000 (wgt'ed) examples reached here.  /* #neg=8 */
+%   | | | else return -0.5032018875661749;  // std dev = 0.376, 9.000 (wgt'ed) examples reached here.  /* #neg=9 */
+%   | else if ( male(B) )
+%   | | then if ( siblingof(A, D) )
+%   | | | then return -0.5695761033238657;  // std dev = 2.11e-08, 6.000 (wgt'ed) examples reached here.  /* #neg=6 */
+%   | | | else return -0.7021342671939367;  // std dev = 0.435, 14.000 (wgt'ed) examples reached here.  /* #neg=14 */
+%   | | else return -0.4571014934039868;  // std dev = 0.000, 6.000 (wgt'ed) examples reached here.  /* #neg=6 */
+
+
+% Clauses:
+
+father(A, B, 4.099990914373896) :- 
+     childof(B, A), 
+     male(B), 
+     !. // Clause #1.
+
+father(A, B, -1.2844093542568227) :- 
+     childof(B, A), 
+     !. // Clause #2.
+
+father(A, B, -0.5307259289613486) :- 
+     male(A), 
+     siblingof(A, C), 
+     male(B), 
+     !. // Clause #3.
+
+father(A, B, -0.48540278451915236) :- 
+     male(A), 
+     siblingof(A, C), 
+     !. // Clause #4.
+
+father(A, B, -0.42984569075474466) :- 
+     male(A), 
+     male(B), 
+     !. // Clause #5.
+
+father(A, B, -0.5032018875661749) :- 
+     male(A), 
+     !. // Clause #6.
+
+father(A, B, -0.5695761033238657) :- 
+     male(B), 
+     siblingof(A, C), 
+     !. // Clause #7.
+
+father(A, B, -0.7021342671939367) :- 
+     male(B), 
+     !. // Clause #8.
+
+father(A, B, -0.4571014934039868) :- !. // Clause #9.
+
+
+% The flattened versions of these clauses:
+
+flattened_father(a, b, 4.099990914373896) :-  /* #pos=50 */ 
+   childof(b, a),
+   male(b),
+   !. // Flattened version of clause #1.
+
+flattened_father(a, b, -1.2844093542568227) :-  /* #neg=4 */ 
+   childof(b, a),
+   !. // Flattened version of clause #2.
+
+flattened_father(a, b, -0.5307259289613486) :-  /* #neg=16 */ 
+   male(a),
+   siblingof(a, underscore),
+   male(b),
+   !. // Flattened version of clause #3.
+
+flattened_father(a, underscore, -0.48540278451915236) :-  /* #neg=11 */ 
+   male(a),
+   siblingof(a, underscore),
+   !. // Flattened version of clause #4.
+
+flattened_father(a, b, -0.42984569075474466) :-  /* #neg=8 */ 
+   male(a),
+   male(b),
+   !. // Flattened version of clause #5.
+
+flattened_father(a, underscore, -0.5032018875661749) :-  /* #neg=9 */ 
+   male(a),
+   !. // Flattened version of clause #6.
+
+flattened_father(a, b, -0.5695761033238657) :-  /* #neg=6 */ 
+   male(b),
+   siblingof(a, underscore),
+   !. // Flattened version of clause #7.
+
+flattened_father(underscore, a, -0.7021342671939367) :-  /* #neg=14 */ 
+   male(a),
+   !. // Flattened version of clause #8.
+
+flattened_father(underscore, underscore, -0.4571014934039868) :-  /* #neg=6 */ 
+   !. // Flattened version of clause #9.
+
+
+% The unique flattened literals:
+%   male(b)
+%   male(a)
+%   childof(b, a)
+%   siblingof(a, underscore)
+
+% Time taken to learn model for 'father': 1.014 seconds.
+% Saving model in: train/models/bRDNs/father.model
+cached groundings hit: 0
+Misses: 0
+
+% Total learning time (10 trees): 1.328 seconds.

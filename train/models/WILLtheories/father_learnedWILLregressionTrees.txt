@@ -1,0 +1,569 @@
+usePrologVariables: true.
+
+% maxTreeDepthInNodes                 = 3
+% maxTreeDepthInLiterals              = 12
+% maxNumberOfLiteralsAtAnInteriorNode = 1
+% maxFreeBridgersInBody               = 1
+% maxNumberOfClauses                  = 8
+% maxNodesToConsider                  = 10
+% maxNodesToCreate                    = 10,000
+% maxAcceptableNodeScoreToStop        = 0.003
+% negPosRatio                         = 2.000
+% testNegPosRatio                     = -1.000
+% # of pos examples                   = 19
+% # of neg examples                   = 0
+
+
+
+%%%%%  WILL-Produced Tree #1 @ 16:32:28 12/28/16.  [Using 3,299,232 memory cells.]  %%%%%
+
+% FOR father(A, B):
+%   if ( childof(B, A) )
+%   then return 0.6914822684328455;  // std dev = 0.913, 6.000 (wgt'ed) examples reached here.  /* #neg=1 #pos=5 */
+%   else return -0.1418510649004878;  // std dev = 0.000, 13.000 (wgt'ed) examples reached here.  /* #neg=13 */
+
+
+% Clauses:
+
+father(A, B, 0.6914822684328455) :- 
+     childof(B, A), 
+     !. // Clause #1.
+
+father(A, B, -0.1418510649004878) :- !. // Clause #2.
+
+
+% The flattened versions of these clauses:
+
+flattened_father(a, b, 0.6914822684328455) :-  /* #neg=1 #pos=5 */ 
+   childof(b, a),
+   !. // Flattened version of clause #1.
+
+flattened_father(underscore, underscore, -0.1418510649004878) :-  /* #neg=13 */ 
+   !. // Flattened version of clause #2.
+
+
+% The unique flattened literals:
+%   childof(b, a)
+
+%%%%%  WILL-Produced Tree #2 @ 16:32:28 12/28/16.  [Using 1,487,584 memory cells.]  %%%%%
+
+% FOR father(A, B):
+%   if ( childof(B, A) )
+%   then return 0.7518526675222027;  // std dev = 0.000, 5.000 (wgt'ed) examples reached here.  /* #pos=5 */
+%   else return -0.12544463852839138;  // std dev = 0.000, 9.000 (wgt'ed) examples reached here.  /* #neg=9 */
+
+
+% Clauses:
+
+father(A, B, 0.7518526675222027) :- 
+     childof(B, A), 
+     !. // Clause #1.
+
+father(A, B, -0.12544463852839138) :- !. // Clause #2.
+
+
+% The flattened versions of these clauses:
+
+flattened_father(a, b, 0.7518526675222027) :-  /* #pos=5 */ 
+   childof(b, a),
+   !. // Flattened version of clause #1.
+
+flattened_father(underscore, underscore, -0.12544463852839138) :-  /* #neg=9 */ 
+   !. // Flattened version of clause #2.
+
+
+% The unique flattened literals:
+%   childof(b, a)
+
+%%%%%  WILL-Produced Tree #3 @ 16:32:28 12/28/16.  [Using 1,456,848 memory cells.]  %%%%%
+
+% FOR father(A, B):
+%   if ( childof(B, A) )
+%   then return 0.4215662343950373;  // std dev = 0.913, 6.000 (wgt'ed) examples reached here.  /* #neg=1 #pos=5 */
+%   else return -0.11231637819360638;  // std dev = 0.000, 10.000 (wgt'ed) examples reached here.  /* #neg=10 */
+
+
+% Clauses:
+
+father(A, B, 0.4215662343950373) :- 
+     childof(B, A), 
+     !. // Clause #1.
+
+father(A, B, -0.11231637819360638) :- !. // Clause #2.
+
+
+% The flattened versions of these clauses:
+
+flattened_father(a, b, 0.4215662343950373) :-  /* #neg=1 #pos=5 */ 
+   childof(b, a),
+   !. // Flattened version of clause #1.
+
+flattened_father(underscore, underscore, -0.11231637819360638) :-  /* #neg=10 */ 
+   !. // Flattened version of clause #2.
+
+
+% The unique flattened literals:
+%   childof(b, a)
+
+%%%%%  WILL-Produced Tree #4 @ 16:32:28 12/28/16.  [Using 1,482,072 memory cells.]  %%%%%
+
+% FOR father(A, B):
+%   if ( male(B) )
+%   then if ( childof(B, A) )
+%   | then return 0.4837804003111713;  // std dev = 0.000, 5.000 (wgt'ed) examples reached here.  /* #pos=5 */
+%   | else return -0.1015963294878363;  // std dev = 0.000, 3.000 (wgt'ed) examples reached here.  /* #neg=3 */
+%   else return -0.26744563756823325;  // std dev = 0.454, 5.000 (wgt'ed) examples reached here.  /* #neg=5 */
+
+
+% Clauses:
+
+father(A, B, 0.4837804003111713) :- 
+     male(B), 
+     childof(B, A), 
+     !. // Clause #1.
+
+father(A, B, -0.1015963294878363) :- 
+     male(B), 
+     !. // Clause #2.
+
+father(A, B, -0.26744563756823325) :- !. // Clause #3.
+
+
+% The flattened versions of these clauses:
+
+flattened_father(a, b, 0.4837804003111713) :-  /* #pos=5 */ 
+   male(b),
+   childof(b, a),
+   !. // Flattened version of clause #1.
+
+flattened_father(underscore, a, -0.1015963294878363) :-  /* #neg=3 */ 
+   male(a),
+   !. // Flattened version of clause #2.
+
+flattened_father(underscore, underscore, -0.26744563756823325) :-  /* #neg=5 */ 
+   !. // Flattened version of clause #3.
+
+
+% The unique flattened literals:
+%   male(a)
+%   childof(b, a)
+%   male(b)
+
+%%%%%  WILL-Produced Tree #5 @ 16:32:28 12/28/16.  [Using 1,489,368 memory cells.]  %%%%%
+
+% FOR father(A, B):
+%   if ( male(B) )
+%   then if ( childof(B, A) )
+%   | then return 0.36617034873344523;  // std dev = 1.05e-08, 5.000 (wgt'ed) examples reached here.  /* #pos=5 */
+%   | else return -0.09269127618926096;  // std dev = 0.000, 5.000 (wgt'ed) examples reached here.  /* #neg=5 */
+%   else return -0.3262421830168772;  // std dev = 0.302, 3.000 (wgt'ed) examples reached here.  /* #neg=3 */
+
+
+% Clauses:
+
+father(A, B, 0.36617034873344523) :- 
+     male(B), 
+     childof(B, A), 
+     !. // Clause #1.
+
+father(A, B, -0.09269127618926096) :- 
+     male(B), 
+     !. // Clause #2.
+
+father(A, B, -0.3262421830168772) :- !. // Clause #3.
+
+
+% The flattened versions of these clauses:
+
+flattened_father(a, b, 0.36617034873344523) :-  /* #pos=5 */ 
+   male(b),
+   childof(b, a),
+   !. // Flattened version of clause #1.
+
+flattened_father(underscore, a, -0.09269127618926096) :-  /* #neg=5 */ 
+   male(a),
+   !. // Flattened version of clause #2.
+
+flattened_father(underscore, underscore, -0.3262421830168772) :-  /* #neg=3 */ 
+   !. // Flattened version of clause #3.
+
+
+% The unique flattened literals:
+%   male(a)
+%   childof(b, a)
+%   male(b)
+
+%%%%%  WILL-Produced Tree #6 @ 16:32:28 12/28/16.  [Using 1,521,120 memory cells.]  %%%%%
+
+% FOR father(A, B):
+%   if ( male(B) )
+%   then if ( childof(B, A) )
+%   | then return 0.2860080114241198;  // std dev = 0.000, 5.000 (wgt'ed) examples reached here.  /* #pos=5 */
+%   | else return -0.08518475138839687;  // std dev = 2.63e-09, 7.000 (wgt'ed) examples reached here.  /* #neg=7 */
+%   else if ( male(A) )
+%   | then return -0.05878416847773236;  // std dev = 0.000, 4.000 (wgt'ed) examples reached here.  /* #neg=4 */
+%   | else return -0.21479204775629218;  // std dev = 0.312, 4.000 (wgt'ed) examples reached here.  /* #neg=4 */
+
+
+% Clauses:
+
+father(A, B, 0.2860080114241198) :- 
+     male(B), 
+     childof(B, A), 
+     !. // Clause #1.
+
+father(A, B, -0.08518475138839687) :- 
+     male(B), 
+     !. // Clause #2.
+
+father(A, B, -0.05878416847773236) :- 
+     male(A), 
+     !. // Clause #3.
+
+father(A, B, -0.21479204775629218) :- !. // Clause #4.
+
+
+% The flattened versions of these clauses:
+
+flattened_father(a, b, 0.2860080114241198) :-  /* #pos=5 */ 
+   male(b),
+   childof(b, a),
+   !. // Flattened version of clause #1.
+
+flattened_father(underscore, a, -0.08518475138839687) :-  /* #neg=7 */ 
+   male(a),
+   !. // Flattened version of clause #2.
+
+flattened_father(a, underscore, -0.05878416847773236) :-  /* #neg=4 */ 
+   male(a),
+   !. // Flattened version of clause #3.
+
+flattened_father(underscore, underscore, -0.21479204775629218) :-  /* #neg=4 */ 
+   !. // Flattened version of clause #4.
+
+
+% The unique flattened literals:
+%   male(a)
+%   childof(b, a)
+%   male(b)
+
+%%%%%  WILL-Produced Tree #7 @ 16:32:28 12/28/16.  [Using 1,523,856 memory cells.]  %%%%%
+
+% FOR father(A, B):
+%   if ( childof(B, A) )
+%   then return 0.13906488288702865;  // std dev = 0.505, 6.000 (wgt'ed) examples reached here.  /* #neg=1 #pos=5 */
+%   else return -0.07569575402119033;  // std dev = 0.029, 10.000 (wgt'ed) examples reached here.  /* #neg=10 */
+
+
+% Clauses:
+
+father(A, B, 0.13906488288702865) :- 
+     childof(B, A), 
+     !. // Clause #1.
+
+father(A, B, -0.07569575402119033) :- !. // Clause #2.
+
+
+% The flattened versions of these clauses:
+
+flattened_father(a, b, 0.13906488288702865) :-  /* #neg=1 #pos=5 */ 
+   childof(b, a),
+   !. // Flattened version of clause #1.
+
+flattened_father(underscore, underscore, -0.07569575402119033) :-  /* #neg=10 */ 
+   !. // Flattened version of clause #2.
+
+
+% The unique flattened literals:
+%   childof(b, a)
+
+%%%%%  WILL-Produced Tree #8 @ 16:32:28 12/28/16.  [Using 1,534,976 memory cells.]  %%%%%
+
+% FOR father(A, B):
+%   if ( male(B) )
+%   then if ( childof(B, A) )
+%   | then return 0.2075224231901097;  // std dev = 7.45e-09, 5.000 (wgt'ed) examples reached here.  /* #pos=5 */
+%   | else return -0.07345564302071796;  // std dev = 0.000, 6.000 (wgt'ed) examples reached here.  /* #neg=6 */
+%   else return -0.15597004045858942;  // std dev = 0.374, 6.000 (wgt'ed) examples reached here.  /* #neg=6 */
+
+
+% Clauses:
+
+father(A, B, 0.2075224231901097) :- 
+     male(B), 
+     childof(B, A), 
+     !. // Clause #1.
+
+father(A, B, -0.07345564302071796) :- 
+     male(B), 
+     !. // Clause #2.
+
+father(A, B, -0.15597004045858942) :- !. // Clause #3.
+
+
+% The flattened versions of these clauses:
+
+flattened_father(a, b, 0.2075224231901097) :-  /* #pos=5 */ 
+   male(b),
+   childof(b, a),
+   !. // Flattened version of clause #1.
+
+flattened_father(underscore, a, -0.07345564302071796) :-  /* #neg=6 */ 
+   male(a),
+   !. // Flattened version of clause #2.
+
+flattened_father(underscore, underscore, -0.15597004045858942) :-  /* #neg=6 */ 
+   !. // Flattened version of clause #3.
+
+
+% The unique flattened literals:
+%   male(a)
+%   childof(b, a)
+%   male(b)
+
+%%%%%  WILL-Produced Tree #9 @ 16:32:28 12/28/16.  [Using 1,550,176 memory cells.]  %%%%%
+
+% FOR father(A, B):
+%   if ( childof(B, A) )
+%   then return 0.17545527232452496;  // std dev = 0.000, 5.000 (wgt'ed) examples reached here.  /* #pos=5 */
+%   else return -0.06017571955663655;  // std dev = 0.041, 10.000 (wgt'ed) examples reached here.  /* #neg=10 */
+
+
+% Clauses:
+
+father(A, B, 0.17545527232452496) :- 
+     childof(B, A), 
+     !. // Clause #1.
+
+father(A, B, -0.06017571955663655) :- !. // Clause #2.
+
+
+% The flattened versions of these clauses:
+
+flattened_father(a, b, 0.17545527232452496) :-  /* #pos=5 */ 
+   childof(b, a),
+   !. // Flattened version of clause #1.
+
+flattened_father(underscore, underscore, -0.06017571955663655) :-  /* #neg=10 */ 
+   !. // Flattened version of clause #2.
+
+
+% The unique flattened literals:
+%   childof(b, a)
+
+%%%%%  WILL-Produced Tree #10 @ 16:32:28 12/28/16.  [Using 1,553,696 memory cells.]  %%%%%
+
+% FOR father(A, B):
+%   if ( childof(B, A) )
+%   then return 0.060521366052186026;  // std dev = 0.498, 6.000 (wgt'ed) examples reached here.  /* #neg=1 #pos=5 */
+%   else return -0.0620217276275192;  // std dev = 0.021, 8.000 (wgt'ed) examples reached here.  /* #neg=8 */
+
+
+% Clauses:
+
+father(A, B, 0.060521366052186026) :- 
+     childof(B, A), 
+     !. // Clause #1.
+
+father(A, B, -0.0620217276275192) :- !. // Clause #2.
+
+
+% The flattened versions of these clauses:
+
+flattened_father(a, b, 0.060521366052186026) :-  /* #neg=1 #pos=5 */ 
+   childof(b, a),
+   !. // Flattened version of clause #1.
+
+flattened_father(underscore, underscore, -0.0620217276275192) :-  /* #neg=8 */ 
+   !. // Flattened version of clause #2.
+
+
+% The unique flattened literals:
+%   childof(b, a)
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%  Final call for computing score for father.  %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+stepLength_tree1(1.0).
+stepLength_tree2(1.0).
+stepLength_tree3(1.0).
+stepLength_tree4(1.0).
+stepLength_tree5(1.0).
+stepLength_tree6(1.0).
+stepLength_tree7(1.0).
+stepLength_tree8(1.0).
+stepLength_tree9(1.0).
+stepLength_tree10(1.0).
+
+logPrior(-1.8).
+father(D, E, Total) :- // A general accessor. 
+   father(D, E, 1000000, Total), !.
+father(D, E, Total) :- waitHere("This should not fail", father(D, E, Total)).
+
+father(D, E, TreesToUse, Total) :- // A tree-limited accessor (e.g., for tuning the number of trees to use).
+   logPrior(LogPrior),
+   getScore_father_tree1(D, E, TreesToUse, Total1),
+   getScore_father_tree2(D, E, TreesToUse, Total2),
+   getScore_father_tree3(D, E, TreesToUse, Total3),
+   getScore_father_tree4(D, E, TreesToUse, Total4),
+   getScore_father_tree5(D, E, TreesToUse, Total5),
+   getScore_father_tree6(D, E, TreesToUse, Total6),
+   getScore_father_tree7(D, E, TreesToUse, Total7),
+   getScore_father_tree8(D, E, TreesToUse, Total8),
+   getScore_father_tree9(D, E, TreesToUse, Total9),
+   getScore_father_tree10(D, E, TreesToUse, Total10),
+   Total is LogPrior + Total1 + Total2 + Total3 + Total4 + Total5 + Total6 + Total7 + Total8 + Total9 + Total10,
+   !.
+father(D, E, TreesToUse, Total) :- waitHere("This should not fail", father(D, E, TreesToUse, Total)).
+
+getScore_father_tree1(D, E, TreesToUse, 0.0) :- 1 > TreesToUse, !.
+getScore_father_tree1(D, E, TreesToUse, Total1) :- father_tree1(D, E, Total), stepLength_tree1(StepLen), Total1 is Total * StepLen.
+
+getScore_father_tree2(D, E, TreesToUse, 0.0) :- 2 > TreesToUse, !.
+getScore_father_tree2(D, E, TreesToUse, Total2) :- father_tree2(D, E, Total), stepLength_tree2(StepLen), Total2 is Total * StepLen.
+
+getScore_father_tree3(D, E, TreesToUse, 0.0) :- 3 > TreesToUse, !.
+getScore_father_tree3(D, E, TreesToUse, Total3) :- father_tree3(D, E, Total), stepLength_tree3(StepLen), Total3 is Total * StepLen.
+
+getScore_father_tree4(D, E, TreesToUse, 0.0) :- 4 > TreesToUse, !.
+getScore_father_tree4(D, E, TreesToUse, Total4) :- father_tree4(D, E, Total), stepLength_tree4(StepLen), Total4 is Total * StepLen.
+
+getScore_father_tree5(D, E, TreesToUse, 0.0) :- 5 > TreesToUse, !.
+getScore_father_tree5(D, E, TreesToUse, Total5) :- father_tree5(D, E, Total), stepLength_tree5(StepLen), Total5 is Total * StepLen.
+
+getScore_father_tree6(D, E, TreesToUse, 0.0) :- 6 > TreesToUse, !.
+getScore_father_tree6(D, E, TreesToUse, Total6) :- father_tree6(D, E, Total), stepLength_tree6(StepLen), Total6 is Total * StepLen.
+
+getScore_father_tree7(D, E, TreesToUse, 0.0) :- 7 > TreesToUse, !.
+getScore_father_tree7(D, E, TreesToUse, Total7) :- father_tree7(D, E, Total), stepLength_tree7(StepLen), Total7 is Total * StepLen.
+
+getScore_father_tree8(D, E, TreesToUse, 0.0) :- 8 > TreesToUse, !.
+getScore_father_tree8(D, E, TreesToUse, Total8) :- father_tree8(D, E, Total), stepLength_tree8(StepLen), Total8 is Total * StepLen.
+
+getScore_father_tree9(D, E, TreesToUse, 0.0) :- 9 > TreesToUse, !.
+getScore_father_tree9(D, E, TreesToUse, Total9) :- father_tree9(D, E, Total), stepLength_tree9(StepLen), Total9 is Total * StepLen.
+
+getScore_father_tree10(D, E, TreesToUse, 0.0) :- 10 > TreesToUse, !.
+getScore_father_tree10(D, E, TreesToUse, Total10) :- father_tree10(D, E, Total), stepLength_tree10(StepLen), Total10 is Total * StepLen.
+
+flattenedLiteralsInThisSetOfTrees(father, 3, [
+   male(a),
+   childof(b, a),
+   male(b)]).
+
+%%%%%  WILL-Produced Tree Combined @ 16:32:29 12/28/16.  [Using 1,628,848 memory cells.]  %%%%%
+
+% FOR father(A, B):
+%   if ( childof(B, A) )
+%   then if ( male(B) )
+%   | then return 4.099990914373896;  // std dev = 0.000, 50.000 (wgt'ed) examples reached here.  /* #pos=50 */
+%   | else return -1.2844093542568227;  // std dev = 0.000, 4.000 (wgt'ed) examples reached here.  /* #neg=4 */
+%   else if ( male(A) )
+%   | then if ( siblingof(A, C) )
+%   | | then if ( male(B) )
+%   | | | then return -0.5307259289613486;  // std dev = 0.351, 16.000 (wgt'ed) examples reached here.  /* #neg=16 */
+%   | | | else return -0.48540278451915236;  // std dev = 0.058, 11.000 (wgt'ed) examples reached here.  /* #neg=11 */
+%   | | else if ( male(B) )
+%   | | | then return -0.42984569075474466;  // std dev = 0.069, 8.000 (wgt'ed) examples reached here.  /* #neg=8 */
+%   | | | else return -0.5032018875661749;  // std dev = 0.376, 9.000 (wgt'ed) examples reached here.  /* #neg=9 */
+%   | else if ( male(B) )
+%   | | then if ( siblingof(A, D) )
+%   | | | then return -0.5695761033238657;  // std dev = 2.11e-08, 6.000 (wgt'ed) examples reached here.  /* #neg=6 */
+%   | | | else return -0.7021342671939367;  // std dev = 0.435, 14.000 (wgt'ed) examples reached here.  /* #neg=14 */
+%   | | else return -0.4571014934039868;  // std dev = 0.000, 6.000 (wgt'ed) examples reached here.  /* #neg=6 */
+
+
+% Clauses:
+
+father(A, B, 4.099990914373896) :- 
+     childof(B, A), 
+     male(B), 
+     !. // Clause #1.
+
+father(A, B, -1.2844093542568227) :- 
+     childof(B, A), 
+     !. // Clause #2.
+
+father(A, B, -0.5307259289613486) :- 
+     male(A), 
+     siblingof(A, C), 
+     male(B), 
+     !. // Clause #3.
+
+father(A, B, -0.48540278451915236) :- 
+     male(A), 
+     siblingof(A, C), 
+     !. // Clause #4.
+
+father(A, B, -0.42984569075474466) :- 
+     male(A), 
+     male(B), 
+     !. // Clause #5.
+
+father(A, B, -0.5032018875661749) :- 
+     male(A), 
+     !. // Clause #6.
+
+father(A, B, -0.5695761033238657) :- 
+     male(B), 
+     siblingof(A, C), 
+     !. // Clause #7.
+
+father(A, B, -0.7021342671939367) :- 
+     male(B), 
+     !. // Clause #8.
+
+father(A, B, -0.4571014934039868) :- !. // Clause #9.
+
+
+% The flattened versions of these clauses:
+
+flattened_father(a, b, 4.099990914373896) :-  /* #pos=50 */ 
+   childof(b, a),
+   male(b),
+   !. // Flattened version of clause #1.
+
+flattened_father(a, b, -1.2844093542568227) :-  /* #neg=4 */ 
+   childof(b, a),
+   !. // Flattened version of clause #2.
+
+flattened_father(a, b, -0.5307259289613486) :-  /* #neg=16 */ 
+   male(a),
+   siblingof(a, underscore),
+   male(b),
+   !. // Flattened version of clause #3.
+
+flattened_father(a, underscore, -0.48540278451915236) :-  /* #neg=11 */ 
+   male(a),
+   siblingof(a, underscore),
+   !. // Flattened version of clause #4.
+
+flattened_father(a, b, -0.42984569075474466) :-  /* #neg=8 */ 
+   male(a),
+   male(b),
+   !. // Flattened version of clause #5.
+
+flattened_father(a, underscore, -0.5032018875661749) :-  /* #neg=9 */ 
+   male(a),
+   !. // Flattened version of clause #6.
+
+flattened_father(a, b, -0.5695761033238657) :-  /* #neg=6 */ 
+   male(b),
+   siblingof(a, underscore),
+   !. // Flattened version of clause #7.
+
+flattened_father(underscore, a, -0.7021342671939367) :-  /* #neg=14 */ 
+   male(a),
+   !. // Flattened version of clause #8.
+
+flattened_father(underscore, underscore, -0.4571014934039868) :-  /* #neg=6 */ 
+   !. // Flattened version of clause #9.
+
+
+% The unique flattened literals:
+%   male(b)
+%   male(a)
+%   childof(b, a)
+%   siblingof(a, underscore)
